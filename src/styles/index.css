@@ -1,0 +1,116 @@
+/* 
+#e55646
+
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Main Sections */
+.main {   
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white; 
+    
+}
+
+.body-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fcdbe4;
+    /* background-color: #F8BCCC; */
+    /* background-color: bisque; */
+    width: 100%;    
+   
+}
+
+.intro-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;   
+    height: 85vh;
+    width: 100%;
+}
+
+.intro-copy{
+    margin: auto;
+    width: 100%;
+}
+
+.intro-image{
+    margin: auto;
+    padding-right:45px;
+}
+
+.projects-section {
+    display: flex;
+    justify-content: space-around;   
+    height: 100vh;
+}
+
+.about-section {
+    display: flex;
+    justify-content: space-around;   
+    height: 100vh;
+}
+
+/* Header */
+.header{
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-between; 
+    align-items: center;  
+    height: 15vh;
+    width: 80%;
+}
+.header-list{
+    display: flex;
+    justify-content: flex-end;
+    width: 40%;
+    list-style-type: none;    
+}
+
+
+
+.header-name{
+    width: 40%;
+}
+
+/* Footer */
+.footer{
+    height: 15vh;
+}
+
+/* Text */
+h1 {
+    font-family: 'Open Sans';
+    font-size: 5em;
+}
+
+#intro-title{
+    margin-left: 2rem;
+}
+
+#intro-sub-title{
+    margin-left: 10rem;
+}
+
+.header-li {
+    display: inline-block; 
+    text-align: center; 
+    margin: 0 0 0 2em;
+    font-size: 1em;   
+    font-family: 'Raleway';
+}
+
+
+/* Images */
+
+#logo{
+    width: 9%;
+    height: auto;
+}
