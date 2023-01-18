@@ -49,6 +49,28 @@
     width: 40%;
 }
 
+.header-link:hover{
+   opacity: 1;
+}
+
+.header-link::before {
+    transition: 300ms;
+    height: 2px;
+    content: "";
+    position: absolute;
+    background-color: grey;
+  }
+  
+  .header-link-ltr::before {
+    width: 0%;
+    bottom: 10px;
+  }
+  
+  .header-link-ltr:hover::before {
+    width: 100%;
+  }
+  
+
 /*Intro Section*/
 .intro-section {
     display: flex;
@@ -70,32 +92,68 @@
     align-items: flex-end;
 }
 
-/*About Section*/
-.about-section {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;   
-    height: 100vh;
-    width: 100%;
-    
-}
-
 /*Projects Section*/
 .projects-section {
     display: flex;
-    justify-content: space-around;   
+    flex-direction: column;
+    align-items: center;   
     min-height: 100vh;
+    width: 100%;
+}
+
+.project-section-title{
+    
+}
+
+.project-card{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 80%;
+    /* From https://css.glass */
+background: rgba(255, 255, 255, 0.41);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(5.7px);
+-webkit-backdrop-filter: blur(5.7px);
+border: 1px solid rgba(255, 255, 255, 1);
+    /* border: 2px solid #84a59d;
+    border-radius: 10px; */
+}
+
+.project-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 0 0 1.5rem;
+    /* align-items: center; */
+}
+
+
+
+/*About Section*/
+.about-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;   
+    height: 100vh;
     width: 100%;
 }
 
 /*Contact Section*/
 .contact-section {
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;   
+    flex-direction: column;
+    /* justify-content: space-around;        */
     height: 100vh;
     width: 100%;
+}
+
+#form-section{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 10rem;    
 }
 
 #form{
@@ -123,7 +181,7 @@ input, textarea{
     font-weight:bold;
     color: grey;
     background-color: #F8BCCC;
-    border: 2px solid grey;
+    border: 2px solid #84a59d;
     border-radius: 5px;    
 }
 
@@ -148,28 +206,73 @@ input, textarea{
 .footer-copy{
     display: inline-block; 
     text-align: center; 
-    margin: 0 2rem 0 2em;
+    margin: 0 2em 0 2em;
     font-size: 1em;   
     font-family: 'Raleway';
 }
 
 /* Text */
-h1 {
+
+h1 {   
+    font-family: 'Pompiere';    
+    font-size: 7em;    
+}
+
+h3{
+    font-family: 'Raleway';
+    font-size: 1.5em;
+    text-align: center;
+}
+
+p{
     font-family: 'Open Sans';
-    font-size: 5em;
+}
+
+#intro-title{
     margin-right: -150px;
 }
 
 #intro-sub-title{
-    margin-left: 8rem;
+    margin-top: 1em;
+    /* margin-left: 6em; */
+    font-family: 'Raleway';
+    font-size: 1.5em;
 }
 
-.header-li {
+.header-link {
     display: inline-block; 
     text-align: center; 
+    position: relative;
     margin: 0 0 0 2em;
-    font-size: 1em;   
+    padding: 1em 0;
+    font-size: 1.25em;       
     font-family: 'Raleway';
+    color: black;
+    opacity: 0.75;
+}
+
+.section-title{
+    margin: 3em 0 3em 0;
+}
+
+.section-subheading{
+    margin: 3em 0 2em 0;
+} 
+
+.section-copy{
+    text-align: left;
+    margin-bottom: 1em;
+}
+
+#greetings{
+
+}
+#salutation{
+    margin-bottom: 0.5em;
+}
+
+#signiture{
+    margin-left: 2em;
 }
 
 ::placeholder{
@@ -188,6 +291,7 @@ h1 {
 
 a:link{
     text-decoration: none;
+    color: black;
 }
 
 a:visited{
@@ -224,4 +328,9 @@ img{
     width: 45rem;
     height: auto; 
 
+}
+
+.mockup{
+    width: 25rem;
+    height: auto;
 }

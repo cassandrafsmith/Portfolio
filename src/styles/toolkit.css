@@ -1,0 +1,19 @@
+#skills{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;    
+}
+
+.skill-icons{    
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;    
+    width: 690px;  /*adjust with media queries*/
+}
+
+.icon{
+    width: 60px;
+    height: 60px;
+    margin: 20px;
+}
