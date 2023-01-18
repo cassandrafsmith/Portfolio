@@ -1,0 +1,24 @@
+.project-card{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 80%;
+    /* From https://css.glass */
+background: rgba(255, 255, 255, 0.41);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(5.7px);
+-webkit-backdrop-filter: blur(5.7px);
+border: 1px solid rgba(255, 255, 255, 1);
+    /* border: 2px solid #84a59d;
+    border-radius: 10px; */
+}
+
+.project-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 0 0 1.5rem;
+    /* align-items: center; */
+}
+

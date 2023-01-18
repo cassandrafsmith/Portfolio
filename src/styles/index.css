@@ -101,35 +101,28 @@
     width: 100%;
 }
 
-.project-section-title{
-    
-}
-
 .project-card{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 80%;
-    /* From https://css.glass */
-background: rgba(255, 255, 255, 0.41);
-border-radius: 16px;
-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-backdrop-filter: blur(5.7px);
--webkit-backdrop-filter: blur(5.7px);
-border: 1px solid rgba(255, 255, 255, 1);
-    /* border: 2px solid #84a59d;
-    border-radius: 10px; */
+    width: 80%;  
+    margin: 0 0 3rem 0; 
+    background: rgba(255, 255, 255, 0.41);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5.7px);
+    -webkit-backdrop-filter: blur(5.7px);
+    border: 1px solid rgba(255, 255, 255, 1);   
 }
 
 .project-info{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin: 0 0 0 1.5rem;
-    /* align-items: center; */
-}
+    margin: 0 0 0 1.5rem;   
+} 
 
-
+ 
 
 /*About Section*/
 .about-section {
@@ -263,6 +256,15 @@ p{
     text-align: left;
     margin-bottom: 1em;
 }
+/*project card*/
+.project-title{
+    margin: 0 0 1em 0;
+    font-size: 1.5em;
+}
+
+.project-description, .tools-used{
+    margin: 0 0 1.5em 0;
+}
 
 #greetings{
 
@@ -322,6 +324,12 @@ img{
     width: 2rem;
     height: auto;
     margin: 0 10px; 
+}
+
+.icon{
+    width: 2rem;
+    height: auto;
+    margin: 0 10px;
 }
 
 #portrait{

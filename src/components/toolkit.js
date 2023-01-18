@@ -71,7 +71,7 @@ const Toolkit = () =>{
 
     const toolsList = tools.map((item) => {
             return(
-                <div class="icon">
+                <div class="toolkit-icon">
                     <img src={item.url} alt={item.alt} title={item.alt}/>
                 </div>
             )

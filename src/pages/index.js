@@ -1,10 +1,11 @@
 import * as React from "react";
 import { Link } from 'gatsby';
-import OpenInNewIcon from '@mui/icons-material/OpenInNew';
+import ProjectCard from "../components/projectCard";
 import Toolkit from "../components/toolkit";
 import './../styles/index.css';
 import logo from './../images/Black and White Minimal Monogram Logo.svg';
 import portrait from './../images/Portrait.png';
+import openIcon from './../images/open_in_new.svg';
 import resume from './../assets/resume - Cassandra Smith.pdf';
 import mockup from './../images/DT_mockup.svg'
 
@@ -48,12 +49,14 @@ const IndexPage = () => {
                 </p>
                 <p className='tools-used'>React • Node.js • Express • PostgreSQL</p>
                 <div className='project-icons'>
-                <a href="https://github.com/KSU-Capstone-22/decentralized-tech-website" target='_blank'><img className='social-logo' id='github-logo' src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" /></a>
-                
+                  <a href="https://github.com/KSU-Capstone-22/decentralized-tech-website" target='_blank'><img className='social-logo' id='github-logo' src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" /></a>
+                  <a href='https://decentralizedtech.org/' target='_blank'><img className='icon' id='open-in-new' src={openIcon} /></a>
                 </div>
               </div>
             <img className='mockup' src={mockup} alt='mockup on laptop and phone' />
           </div>
+          <ProjectCard />
+          <ProjectCard />
         </div> 
         
           <div className='about-section' id='about'>          
@@ -66,7 +69,9 @@ const IndexPage = () => {
                 I'm Cassandra Smith, a full-stack software engineer 
                 based out of the Dallas-Ft. Worth Metroplex.
                 I enjoy the process of bringing together logic and art to create 
-                responsive websites and web apps that are both user-friendly and accessible. 💻
+                responsive websites and web apps that are both user-friendly and ???. 💻 
+                I am currently learning more about accessibility and how to create applications
+                that are ???
               </p>
               <p className='section-copy'>
                 {/* My first intro to programming was with Java--the wordiness and syntactic rules 
