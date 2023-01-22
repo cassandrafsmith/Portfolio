@@ -33,6 +33,10 @@ module.exports = {
             name: `Sofia Sans 700`,
             file: `https://fonts.googleapis.com/css2?family=Sofia+Sans:wght@700&display=swap`,
           },  
+          {
+            name: `Gloria Hallelujah`,
+            file: `https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap`,
+          },
         ],
       },
     },

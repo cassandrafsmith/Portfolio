@@ -10,12 +10,13 @@ const ProjectCard = ({props}) =>{
     useEffect(() => {
         AOS.init({
             duration: 1200,
-            easing: 'ease-in-out-back'
+            easing: 'ease',
+            once: true,
         });
       }, []);
 
     return(
-        <div className='project-card grow' data-aos="fade-right"  data-aos-once="true">
+        <div className='project-card grow' data-aos="zoom-in"  >
             <div className='project-info'>
               <h4 className='project-title'>{props.title}</h4>
               <p className='project-description'>{props.description}</p>

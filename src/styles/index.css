@@ -18,9 +18,12 @@
     
 }
 
-.main-section{
+/* .main-section{
     width: 80%;
 }
+I might use this to take away the body card section
+eventually...
+*/
 
 .body-card {
     display: flex;
@@ -105,6 +108,7 @@
     min-height: 100vh;
     width: 100%;
     align-items: center;
+    margin: 0 0 4em 0;
 }
 
 /*Projects Section*/
@@ -293,6 +297,7 @@ p{
 
 #signiture{
     margin-left: 2em;
+    font-family: 'Gloria Hallelujah','Courier New', Courier, monospace;
 }
 
 ::placeholder{

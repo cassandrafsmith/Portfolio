@@ -20,8 +20,9 @@ import 'aos/dist/aos.css';
 const IndexPage = () => {
   useEffect(() => {
     AOS.init({
-        // duration: 1500,
-        // easing: 'ease-in-out-back'
+        duration: 1200,
+        easing: 'ease-in-out-back',
+        once: true,       
     });
   }, []);
 
@@ -43,8 +44,18 @@ const IndexPage = () => {
 
         <div className='intro-section' id='intro'> 
           <div className='intro-copy'>
-            <h1 className='title' id="intro-title">Hi, I'm Cassandra.</h1>
-            <h4 className='sub-title' id='intro-sub-title'>I like to build things...</h4>  
+            <h1 className='title' id="intro-title"
+              data-aos="zoom-in" 
+              data-aos-duration='1000'>
+                Hi, I'm Cassandra.
+            </h1>
+            <h4 className='sub-title' 
+              id='intro-sub-title' 
+              data-aos="zoom-in-up" 
+              data-aos-duration='1000' 
+              data-aos-delay="1400">
+                I like to build things...
+            </h4>  
           </div> 
           <div className='intro-image'>
             <img id='portrait' src={portrait} alt='Illustrated portrait of Cassandra Smith' />
@@ -52,7 +63,7 @@ const IndexPage = () => {
         </div>
         
         <div className='about-section' id='about'>          
-          <h2 className='section-title' id='about-section-title'>About Me 💜</h2>         
+          <h2 className='section-title' id='about-section-title' data-aos='fade-right'>About Me 💜</h2>         
           <div className='about-me-letter'>
             <p className='section-copy' id='greetings'>
               Hello, World!
@@ -96,14 +107,14 @@ const IndexPage = () => {
         </div>     
 
         <div className='projects-section' id='projects'> 
-          <h2 className='section-title' id="project-section-title">Projects 💜</h2> 
+          <h2 className='section-title' id="project-section-title" data-aos='fade-right'>Projects 💜</h2> 
           <ProjectCard props={projectCardInfo[0]} />
           <ProjectCard props={projectCardInfo[1]} />
           <ProjectCard props={projectCardInfo[2]} />
         </div> 
 
         <div className='contact-section' id='contact'> 
-        <h2 className='section-title' id='contact-section-title'>Contact 💜</h2> 
+        <h2 className='section-title' id='contact-section-title' data-aos='fade-right'>Contact 💜</h2> 
           <div id='form-section'>
             <div>
               <h1>Let's Connect!</h1>
