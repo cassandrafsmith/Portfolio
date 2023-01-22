@@ -4,7 +4,7 @@
 module.exports = {
   siteMetadata: {
     siteUrl: `https://www.yourdomain.tld`,
-    description: 'Cassandra Smith\'s Portfolio Site'    
+    description: 'Cassandra Smith\'s Portfolio Site'   
   },
   plugins: [
     {
