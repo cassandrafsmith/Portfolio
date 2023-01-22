@@ -1,3 +1,4 @@
+
 /* 
 #e55646
 
@@ -15,6 +16,10 @@
     align-items: center;
     background-color:#f5cac3;
     
+}
+
+.main-section{
+    width: 80%;
 }
 
 .body-card {
@@ -78,7 +83,7 @@
     justify-content: space-between;   
     height: 85vh;
     width: 100%;
-    
+    margin: 0 0 4em 0;
 }
 
 .intro-copy{
@@ -92,6 +97,16 @@
     align-items: flex-end;
 }
 
+/*About Section*/
+.about-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;   
+    min-height: 100vh;
+    width: 100%;
+    align-items: center;
+}
+
 /*Projects Section*/
 .projects-section {
     display: flex;
@@ -101,52 +116,21 @@
     width: 100%;
 }
 
-.project-card{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 80%;  
-    margin: 0 0 3rem 0; 
-    background: rgba(255, 255, 255, 0.41);
-    border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(5.7px);
-    -webkit-backdrop-filter: blur(5.7px);
-    border: 1px solid rgba(255, 255, 255, 1);   
-}
-
-.project-info{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin: 0 0 0 1.5rem;   
-} 
-
- 
-
-/*About Section*/
-.about-section {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;   
-    height: 100vh;
-    width: 100%;
-}
-
 /*Contact Section*/
 .contact-section {
     display: flex;
-    flex-direction: column;
-    /* justify-content: space-around;        */
+    flex-direction: column;    
     height: 100vh;
     width: 100%;
+    align-items: center;
 }
 
 #form-section{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    margin-top: 10rem;    
+    margin-top: 10rem;  
+    width: 100%;  
 }
 
 #form{
@@ -160,8 +144,10 @@ input, textarea{
     border: none;
     border-radius: 5px;
     padding: 10px;
-    margin: 5px;
+    margin: 6px;
     background-color: #F8BCCC;
+    box-shadow: 0 8px 5px rgba(0, 0, 0, 0.1);
+    resize: none;
     
 }
 
@@ -169,17 +155,24 @@ input, textarea{
     width: 120px;
     height: 40px;
     margin-top: 20px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Raleway', Tahoma, Geneva, Verdana, sans-serif;
     font-size:1em;
     font-weight:bold;
-    color: grey;
-    background-color: #F8BCCC;
-    border: 2px solid #84a59d;
+    color: black;
+    background-color: #ffffff69;
+    /* background-color: #F8BCCC; */
+    border: 1px solid white;
     border-radius: 5px;    
+    box-shadow: 0 8px 5px rgba(0, 0, 0, 0.1);
 }
 
 .button:hover {
-    background-color: bisque;
+    background-color: #ffffff69;
+}
+
+.button:active{
+    transform: scale(0.9);
+    box-shadow: none;
 }
 
 /* Footer */
@@ -201,24 +194,27 @@ input, textarea{
     text-align: center; 
     margin: 0 2em 0 2em;
     font-size: 1em;   
-    font-family: 'Raleway';
+    font-family: 'Raleway',  san sarif;
 }
 
 /* Text */
 
 h1 {   
-    font-family: 'Pompiere';    
+    font-family: 'Pompiere',  san sarif;    
     font-size: 7em;    
 }
 
 h3{
-    font-family: 'Raleway';
+    font-family: 'Raleway',  san sarif;
     font-size: 1.5em;
     text-align: center;
 }
+h4 {
+    font-family: "Sophia Sans 700", san sarif;
+}
 
 p{
-    font-family: 'Open Sans';
+    font-family: 'Open Sans',  san sarif;
 }
 
 #intro-title{
@@ -239,13 +235,20 @@ p{
     margin: 0 0 0 2em;
     padding: 1em 0;
     font-size: 1.25em;       
-    font-family: 'Raleway';
+    font-family: 'Raleway',  san sarif;
     color: black;
     opacity: 0.75;
 }
 
 .section-title{
-    margin: 3em 0 3em 0;
+    display: inline-block; 
+    position: relative;
+    margin: 3em 0 3em 0;   
+    font-family: 'Raleway',  san sarif;
+    font-size: 2em;
+    font-weight: bold;
+    letter-spacing: 0.2rem;
+    z-index: 1;
 }
 
 .section-subheading{
@@ -256,14 +259,29 @@ p{
     text-align: left;
     margin-bottom: 1em;
 }
-/*project card*/
-.project-title{
-    margin: 0 0 1em 0;
-    font-size: 1.5em;
+
+.section-title::before {
+    content: "";
+    position: absolute;    
+    background-color: #ffe3e3;
+    -webkit-box-shadow: 0 0 8px #ffd9d9;
+    box-shadow: 0 0 8px #ffd9d9;
+    height: 25px;
+    left: 4px;
+    bottom: 0;   
+    z-index: -1;
 }
 
-.project-description, .tools-used{
-    margin: 0 0 1.5em 0;
+#about-section-title::before {
+    width:200px;
+}
+
+#project-section-title::before {
+    width:185px;
+}
+
+#contact-section-title::before {
+    width:180px;
 }
 
 #greetings{
@@ -341,4 +359,12 @@ img{
 .mockup{
     width: 25rem;
     height: auto;
+}
+
+.grow:hover {
+    transition: all .2s ease-in-out;
+}
+
+.grow:hover {
+    transform: scale(1.2);
 }

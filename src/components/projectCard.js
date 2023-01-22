@@ -1,29 +1,32 @@
 import React from 'React';
+import { useEffect } from 'react';
 import './../styles/projectCard.css';
+import './../styles/index.css';
 import openIcon from './../images/open_in_new.svg';
-import mockup from './../images/DT_mockup.svg'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
+const ProjectCard = ({props}) =>{   
+    useEffect(() => {
+        AOS.init({
+            duration: 1200,
+            easing: 'ease-in-out-back'
+        });
+      }, []);
 
-const ProjectCard = () =>{
     return(
-        <div className='project-card'>
+        <div className='project-card grow' data-aos="fade-right"  data-aos-once="true">
             <div className='project-info'>
-              <h4 className='project-title'>Website Build</h4>
-              <p className='project-description'> For this project I, along with my
-                 capstone team members, built a complete website
-                  rebuild for Decentralized Technologies, a 
-                  company located in Merietta, GA. The build included the 
-                  public facing website, along with admin, 
-                  employee, and client dashboards.
-                </p>
-                <p className='tools-used'>React • Node.js • Express • PostgreSQL</p>
+              <h4 className='project-title'>{props.title}</h4>
+              <p className='project-description'>{props.description}</p>
+                <p className='tools-used'>{props.tools}</p>
                 <div className='project-icons'>
-                  <a href="https://github.com/KSU-Capstone-22/decentralized-tech-website" target='_blank'><img className='social-logo' id='github-logo' src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" /></a>
-                  <a href='https://decentralizedtech.org/' target='_blank'><img className='icon' id='open-in-new' src={openIcon} /></a>
+                  <a href={props.github} target='_blank'rel="noreferrer"><img className='social-logo grow' id='github-logo' src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt='github logo'/></a>
+                  <a href={props.url} target='_blank'rel="noreferrer"><img className='icon grow' id='open-in-new' src={openIcon} alt='open in new page icon'/></a>
                 </div>
             </div>
-            <img className='mockup' src={mockup} alt='mockup on laptop and phone' />
-        </div>    
+            <img className='mockup' src={props.mockup} alt='mockup on laptop and phone' /> 
+        </div>        
     )
 };
 

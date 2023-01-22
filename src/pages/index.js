@@ -1,22 +1,38 @@
 import * as React from "react";
+import { useEffect }from 'react';
 import { Link } from 'gatsby';
 import ProjectCard from "../components/projectCard";
 import Toolkit from "../components/toolkit";
 import './../styles/index.css';
 import logo from './../images/Black and White Minimal Monogram Logo.svg';
+import logo2 from './../images/black_and_white_logo.svg';
+import appleTouchIcon from './../images/favicon/apple-touch-icon.png';
+import icon16 from "./../images/favicon/favicon-16x16.png";
+import icon32 from "./../images/favicon/favicon-32x32.png";
 import portrait from './../images/Portrait.png';
-import openIcon from './../images/open_in_new.svg';
 import resume from './../assets/resume - Cassandra Smith.pdf';
-import mockup from './../images/DT_mockup.svg'
+import {projectCardInfo} from './../assets/projectCardInfo.js';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
+
 
 const IndexPage = () => {
+  useEffect(() => {
+    AOS.init({
+        // duration: 1500,
+        // easing: 'ease-in-out-back'
+    });
+  }, []);
+
+
   return (      
     <div className='main'> 
       
       <div className='body-card'>
 
         <header className='header'>              
-            <img id='logo' src={logo} alt='logo' />
+            <img id='logo' src={logo2} alt='logo' />
             <ul className='header-list'>       
               <li className='header-link header-link-ltr'><Link to='#about'>About</Link></li>       
               <li className='header-link header-link-ltr'><Link to='#projects'>Projects</Link></li>
@@ -34,72 +50,57 @@ const IndexPage = () => {
             <img id='portrait' src={portrait} alt='Illustrated portrait of Cassandra Smith' />
           </div> 
         </div>
+        
+        <div className='about-section' id='about'>          
+          <h2 className='section-title' id='about-section-title'>About Me 💜</h2>         
+          <div className='about-me-letter'>
+            <p className='section-copy' id='greetings'>
+              Hello, World!
+            </p>
+            <p className='section-copy'> 
+              I'm Cassandra Smith, a full-stack software engineer 
+              based out of the Dallas-Ft. Worth Metroplex.
+              I love the process of bringing together logic and art to create 
+              responsive websites and web apps that are both user-friendly and engaging. 💻 
+              As a problem-solver, I enjoy a challenge and am excited to broaden my skills in an
+              environment that inspires growth, encourages mentorship, and supports continued-learning.
+              I am currently studying up on inclusive UI/UX design  
+              and how to create digital experiences that are fun and accessible for all.
+            </p>
+            <p className='section-copy'>
+              {/* My first intro to programming was with Java--the wordiness and syntactic rules 
+              touched my heart. 💜 However, after diving further into web development, I realized 
+              that JavaScript is where it's at! 🤗  */}
+              I have a Master of Science in Software Engineering from Kennesaw State University, 
+              and a Bachelor of Science in Psychology from Northwestern State University of Louisiana.
+              When I'm not at my computer, I enjoy the usuals—spending time with my family, 
+              baking, eating 🍽, reading Scandi-Noir, starting knitting projects that I probably 
+              won't finish, and bingeing my favorite shows. Recommendations for dark crime dramas, 
+              anything vampire related, and unique eats in the DFW area are always welcome! 😝
+            </p>
+            <p className='section-copy'>
+             
+            </p>
+            <p className='section-copy'>
+              Anyway, if you made it this far, thank you and please, feel free to drop me a line! 
+            </p>
+            <p className='section-copy' id='salutation'>
+              Sincerely,              
+            </p>
+            <p className='section-copy' id='signiture'>
+              Cassandra F. Smith
+            </p>
+          </div>
+          <h3 class="section-subheading">Tool Kit 🔧</h3>
+          <Toolkit />
+        </div>     
 
         <div className='projects-section' id='projects'> 
-          <h2 className='section-title' id="project-section-title">Projects 💜</h2>  
-          <div className='project-card'>
-            <div className='project-info'>
-              <h4 className='project-title'>Website Build</h4>
-              <p className='project-description'> For this project I, along with my
-                 capstone team members, built a complete website
-                  rebuild for Decentralized Technologies, a 
-                  company located in Merietta, GA. The build included the 
-                  public facing website, along with admin, 
-                  employee, and client dashboards.
-                </p>
-                <p className='tools-used'>React • Node.js • Express • PostgreSQL</p>
-                <div className='project-icons'>
-                  <a href="https://github.com/KSU-Capstone-22/decentralized-tech-website" target='_blank'><img className='social-logo' id='github-logo' src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" /></a>
-                  <a href='https://decentralizedtech.org/' target='_blank'><img className='icon' id='open-in-new' src={openIcon} /></a>
-                </div>
-              </div>
-            <img className='mockup' src={mockup} alt='mockup on laptop and phone' />
-          </div>
-          <ProjectCard />
-          <ProjectCard />
+          <h2 className='section-title' id="project-section-title">Projects 💜</h2> 
+          <ProjectCard props={projectCardInfo[0]} />
+          <ProjectCard props={projectCardInfo[1]} />
+          <ProjectCard props={projectCardInfo[2]} />
         </div> 
-        
-          <div className='about-section' id='about'>          
-            <h2 className='section-title'>About Me 💜</h2>         
-            <div className='about-me-letter'>
-              <p className='section-copy' id='greetings'>
-                Hello, World!
-              </p>
-              <p className='section-copy'> 
-                I'm Cassandra Smith, a full-stack software engineer 
-                based out of the Dallas-Ft. Worth Metroplex.
-                I enjoy the process of bringing together logic and art to create 
-                responsive websites and web apps that are both user-friendly and ???. 💻 
-                I am currently learning more about accessibility and how to create applications
-                that are ???
-              </p>
-              <p className='section-copy'>
-                {/* My first intro to programming was with Java--the wordiness and syntactic rules 
-                touched my heart. 💜 However, after diving further into web development, I realized 
-                that JavaScript is where it's at! 🤗  */}
-                I enjoy a challenge and am excited to broaden 
-                my skills in an environment that inspires growth, encourages mentorship, and 
-                supports continued-learning.
-              </p>
-              <p className='section-copy'>
-                When I'm not at my computer, I enjoy the usuals--spending time with my family, 
-                baking, eating 🍽, reading Scandi-Noir, starting knitting projects that I probably 
-                won't finish, and bingeing my favorite shows. Recommendations for dark crime dramas, 
-                or anything vampire related, are always welcome! 😝
-              </p>
-              <p className='section-copy'>
-                Anyway, if you made it this far, thank you and please, feel free to drop me a line! 
-              </p>
-              <p className='section-copy' id='salutation'>
-                Sincerely,              
-              </p>
-              <p className='section-copy' id='signiture'>
-                Cassandra F. Smith
-              </p>
-            </div>
-            <h3 class="section-subheading">Tool Kit 🔧</h3>
-            <Toolkit />
-          </div>     
 
         <div className='contact-section' id='contact'> 
         <h2 className='section-title' id='contact-section-title'>Contact 💜</h2> 
@@ -120,21 +121,28 @@ const IndexPage = () => {
         </div> 
 
         <footer className='footer' id='footer'>
-          <img id='logo' src={logo} alt='logo' />
+          <a href='#'><img id='logo' src={logo2} alt='logo' /></a>
           <p className='footer-copy'>Designed & Developed by Cassandra F. Smith © 2023 😊</p>
-          <div className='sicial-icons'>
+          <div className='social-icons'>
             {/*add onHover animation to the link icons*/}
-            <a href='https://www.linkedin.com/in/cassandra-f-smith/' target='_blank'><img className='social-logo' id='linkedIn-logo' src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-plain.svg" /></a>            
-            <a href="https://github.com/cassandrafsmith" target='_blank'><img className='social-logo' id='github-logo' src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" /></a>          
+            <a href='https://www.linkedin.com/in/cassandra-f-smith/' target='_blank' rel="noreferrer"><img className='social-logo grow' id='linkedIn-logo' src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-plain.svg" alt='linkedin icon'/></a>            
+            <a href="https://github.com/cassandrafsmith" target='_blank' without rel="noreferrer"><img className='social-logo grow' id='github-logo' src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt='github icon'/></a>          
           </div>
         </footer> 
-
-      </div>      
-        
+      </div>    
+      
     </div>      
   )
 }
 
 export default IndexPage;
 
-export const Head = () => <title>Cassandra F. Smith | Software Engineer</title>
+export const Head = () => (
+  <>
+    <title>Cassandra F. Smith | Software Engineer</title>
+    <link  rel="apple-touch-icon" sizes="180x180" href={appleTouchIcon} />
+    <link  rel="icon" type="image/png" sizes="32x32" href={icon32}/> 
+    <link  rel="icon" type="image/png" sizes="16x16" href={icon16}/>
+    <link  rel="manifest" href='./../images/favicon/site.webmanifest'/>
+  </>
+)

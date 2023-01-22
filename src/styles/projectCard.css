@@ -1,24 +1,46 @@
+
 .project-card{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     width: 80%;
-    /* From https://css.glass */
-background: rgba(255, 255, 255, 0.41);
-border-radius: 16px;
-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-backdrop-filter: blur(5.7px);
--webkit-backdrop-filter: blur(5.7px);
-border: 1px solid rgba(255, 255, 255, 1);
-    /* border: 2px solid #84a59d;
-    border-radius: 10px; */
+    margin: 0 auto 3rem auto;    
+    background: #ffffff69;    
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5.7px);
+    -webkit-backdrop-filter: blur(5.7px);
+    border: 1px solid rgba(255, 255, 255, 1);   
 }
 
 .project-info{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin: 0 0 0 1.5rem;
-    /* align-items: center; */
+    margin: 0 0 0 1.5rem;    
 }
 
+.project-card:hover {
+    transition: all .2s ease-in-out;
+}
+
+.project-card:hover {
+    transform: scale(1.03);
+} 
+
+.grow:hover {
+    transition: all .2s ease-in-out;
+}
+
+.grow:hover {
+    transform: scale(1.2);
+} 
+
+.project-title{
+    margin: 0 0 1em 0;
+    font-size: 1.5em;
+}
+
+.project-description, .tools-used{
+    margin: 0 0 1.5em 0;
+}

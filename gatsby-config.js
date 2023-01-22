@@ -4,6 +4,7 @@
 module.exports = {
   siteMetadata: {
     siteUrl: `https://www.yourdomain.tld`,
+    description: 'Cassandra Smith\'s Portfolio Site'    
   },
   plugins: [
     {
@@ -29,9 +30,9 @@ module.exports = {
             file: `https://fonts.googleapis.com/css2?family=Life+Savers&display=swap`,
           }, 
           {
-            name: `Material Icons`,
-            file: `<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,700,0,0`,
-          }  
+            name: `Sofia Sans 700`,
+            file: `https://fonts.googleapis.com/css2?family=Sofia+Sans:wght@700&display=swap`,
+          },  
         ],
       },
     },
