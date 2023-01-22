@@ -6,6 +6,7 @@ import Toolkit from "../components/toolkit";
 import './../styles/index.css';
 import logo from './../images/Black and White Minimal Monogram Logo.svg';
 import logo2 from './../images/black_and_white_logo.svg';
+import scroll from './../images/arrow_upward_FILL0_wght400_GRAD0_opsz48.svg'
 import appleTouchIcon from './../images/favicon/apple-touch-icon.png';
 import icon16 from "./../images/favicon/favicon-16x16.png";
 import icon32 from "./../images/favicon/favicon-32x32.png";
@@ -29,7 +30,7 @@ const IndexPage = () => {
 
   return (      
     <div className='main'> 
-      
+
       <div className='body-card'>
 
         <header className='header'>              
@@ -59,10 +60,14 @@ const IndexPage = () => {
           </div> 
           <div className='intro-image'>
             <img id='portrait' src={portrait} alt='Illustrated portrait of Cassandra Smith' />
-          </div> 
+          </div>          
+        </div>
+
+        <div className='scroll'>
+          <a href='#'><img id='scroller' className='grow' src={scroll} alt='up arrow scroller'></img></a>
         </div>
         
-        <div className='about-section' id='about'>          
+        <div className='about-section' id='about'>  
           <h2 className='section-title' id='about-section-title' data-aos='fade-right'>About Me 💜</h2>         
           <div className='about-me-letter'>
             <p className='section-copy' id='greetings'>
@@ -82,8 +87,8 @@ const IndexPage = () => {
               {/* My first intro to programming was with Java--the wordiness and syntactic rules 
               touched my heart. 💜 However, after diving further into web development, I realized 
               that JavaScript is where it's at! 🤗  */}
-              I have a Master of Science in Software Engineering from Kennesaw State University, 
-              and a Bachelor of Science in Psychology from Northwestern State University of Louisiana.
+              I have a Bachelor of Science in Psychology from Northwestern State University of Louisiana,                
+              and a Master of Science in Software Engineering from Kennesaw State University.
               When I'm not at my computer, I enjoy the usuals—spending time with my family, 
               baking, eating 🍽, reading Scandi-Noir, starting knitting projects that I probably 
               won't finish, and bingeing my favorite shows. Recommendations for dark crime dramas, 
@@ -140,8 +145,7 @@ const IndexPage = () => {
             <a href="https://github.com/cassandrafsmith" target='_blank' without rel="noreferrer"><img className='social-logo grow' id='github-logo' src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt='github icon'/></a>          
           </div>
         </footer> 
-      </div>    
-      
+      </div> 
     </div>      
   )
 }
