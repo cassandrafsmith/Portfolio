@@ -24,5 +24,8 @@
     "react-dom": "^18.2.0",
     "react-helmet": "^6.1.0",
     "sal.js": "^0.8.5"
+  },
+  "engines": {
+    "node": ">=18.1.0"
   }
 }
