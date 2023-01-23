@@ -207,6 +207,11 @@ input, textarea{
     
 }
 
+label{
+    visibility: hidden;
+    height: 0;
+}
+
 .button-contatiner{
     display: flex;
     flex-direction: row;

@@ -123,16 +123,19 @@ const IndexPage = () => {
               <p>Please, feel free to reach out with any question or comments.</p>
             </div>
             <div id="contact-form" class="section-content">
-                      <form id="form" method='POST' data-netlify='true' data-netlify-recaptcha="true" >
-                          <input type="text" name='name' id="name" placeholder="Name" required/>
-                          <input type="email" name='email' id="email" placeholder="Email" required/>
-                          <textarea name='message' rows="10" column="80" placeholder="Enter your message here..." required></textarea>
-                          <div className='button-container'>
-                            <button type="submit" class="button">Get in Touch</button>
-                            <div data-netlify-recaptcha="true"></div>
-                          </div>
-                          
-                      </form>
+              <form id="form" name='contact' method='POST' data-netlify='true' data-netlify-recaptcha="true" >
+                <input type="hidden" name="form-name" value="contact" />
+                <label>Your Name:</label>
+                <input type="text" name='name' id="name" placeholder="Name" required/>
+                <label>Your Email:</label>
+                <input type="email" name='email' id="email" placeholder="Email" required/>
+                <label>Your Message:</label>
+                <textarea name='message' rows="10" column="80" placeholder="Enter your message here..." required></textarea>
+                <div className='button-container'>
+                  <button type="submit" class="button">Get in Touch</button>
+                  <div data-netlify-recaptcha="true"></div>
+                </div>                          
+              </form>
             </div>
           </div>
         </div> 
