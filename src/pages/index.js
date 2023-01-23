@@ -11,7 +11,7 @@ import appleTouchIcon from './../images/favicon/apple-touch-icon.png';
 import icon16 from "./../images/favicon/favicon-16x16.png";
 import icon32 from "./../images/favicon/favicon-32x32.png";
 import portrait from './../images/Portrait.png';
-import resume from './../assets/resume - Cassandra Smith.pdf';
+import resume from './../assets/resumeCassandraSmith.pdf';
 import {projectCardInfo} from './../assets/projectCardInfo.js';
 import AOS from 'aos';
 import 'aos/dist/aos.css';

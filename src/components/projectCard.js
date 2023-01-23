@@ -1,4 +1,4 @@
-import React from 'React';
+import React from 'react';
 import { useEffect } from 'react';
 import './../styles/projectCard.css';
 import './../styles/index.css';
