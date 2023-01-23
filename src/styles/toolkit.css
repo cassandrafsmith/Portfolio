@@ -9,7 +9,7 @@
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;    
-    width: 690px;  /*adjust with media queries*/
+    max-width: 900px;  /*adjust with media queries*/
 }
 
 .toolkit-icon{

@@ -89,8 +89,46 @@ eventually...
 
 #scroller{
     width: 40px;
-    height: auto;
+    height: auto; 
+    animation: blink 5s linear infinite;   
 }  
+
+@keyframes blink {
+    0% {
+      opacity: .0;
+    }
+    10%{
+        opacity: .1;
+    }
+    20%{
+        opacity: .25;
+    }
+    30% {
+      opacity: .5;
+    }
+    40% {
+        opacity: .75;
+    }
+    50% {
+      opacity: 1;
+    }
+    60%{
+        opacity: .75;
+    }
+    70% {
+      opacity: .5;
+    }
+    80% {
+        opacity: .25;
+    }
+    90% {
+      opacity: .10;
+    }
+    100% {
+        opacity: .0;
+      }
+
+}
 
 /*Intro Section*/
 .intro-section {    
@@ -162,7 +200,8 @@ input, textarea{
     border-radius: 5px;
     padding: 10px;
     margin: 6px;
-    background-color: #F8BCCC;
+    background-color: #f5b3b3;
+    /* background-color: #F8BCCC; */
     box-shadow: 0 8px 5px rgba(0, 0, 0, 0.1);
     resize: none;
     
@@ -184,7 +223,8 @@ input, textarea{
 }
 
 .button:hover {
-    background-color: #ffffff69;
+    background-color: #aaaaaa69;
+    border: 1px solid black;
 }
 
 .button:active{
@@ -272,11 +312,6 @@ p{
     margin: 3em 0 2em 0;
 } 
 
-.section-copy{
-    text-align: left;
-    margin-bottom: 1em;
-}
-
 .section-title::before {
     content: "";
     position: absolute;    
@@ -293,6 +328,10 @@ p{
     width:200px;
 }
 
+#toolkit-section-title::before {
+    width:175px;
+}
+
 #project-section-title::before {
     width:185px;
 }
@@ -301,16 +340,59 @@ p{
     width:180px;
 }
 
-#greetings{
-
+/* About Me Letter */
+.section-copy{
+    text-align: left;
+    margin-bottom: 1em; 
 }
+
+#greetings{
+    margin-left: 2em;
+}
+
+.section-copy span{
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+}
+.section-copy span::before{
+    content: "";
+    display: inline;
+    position: absolute;    
+    background-color: #f5b3b3;
+    -webkit-box-shadow: 0 0 8px #ffd9d9;
+    box-shadow: 0 0 8px #ffd9d9;
+    height: 0.6em;
+    left: 2px;
+    bottom: 0;   
+    z-index: -1;  
+}
+
+#am-span1::before{
+    width: 205px;
+}
+
+#am-span2::before{
+    width: 250px;
+}
+
+#am-span3::before{
+    width: 315px;
+}
+#am-span4::before{
+    width: 73px;
+}
+
 #salutation{
-    margin-bottom: 0.5em;
+    margin-left: 2em;
+    margin-bottom: 0.5em;    
 }
 
 #signiture{
     margin-left: 2em;
     font-family: 'Gloria Hallelujah','Courier New', Courier, monospace;
+    font-size: 1.2em;   
+    /* color: #f5b3b3; */
 }
 
 ::placeholder{

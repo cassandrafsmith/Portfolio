@@ -74,23 +74,20 @@ const IndexPage = () => {
               Hello, World!
             </p>
             <p className='section-copy'> 
-              I'm Cassandra Smith, a full-stack software engineer 
-              based out of the Dallas-Ft. Worth Metroplex.
+              I'm Cassandra Smith, a <span id='am-span1'>full-stack software engineer</span> based
+               out of the Dallas-Ft. Worth Metroplex.
               I love the process of bringing together logic and art to create 
               responsive websites and web apps that are both user-friendly and engaging. 💻 
               As a problem-solver, I enjoy a challenge and am excited to broaden my skills in an
-              environment that inspires growth, encourages mentorship, and supports continued-learning.
-              I am currently studying up on inclusive UI/UX design  
+              environment that inspires growth, encourages mentorship, and supports continued-learning. 🌟
+              I am currently learning more about inclusive UI/UX design  
               and how to create digital experiences that are fun and accessible for all.
             </p>
-            <p className='section-copy'>
-              {/* My first intro to programming was with Java--the wordiness and syntactic rules 
-              touched my heart. 💜 However, after diving further into web development, I realized 
-              that JavaScript is where it's at! 🤗  */}
-              I have a Bachelor of Science in Psychology from Northwestern State University of Louisiana,                
-              and a Master of Science in Software Engineering from Kennesaw State University.
+            <p className='section-copy'>             
+              I have a <span id='am-span2'>Bachelor of Science in Psychology</span> from Northwestern State University of Louisiana,                
+              and a <span id='am-span3'>Master of Science in Software Engineering</span> from Kennesaw State University.
               When I'm not at my computer, I enjoy the usuals—spending time with my family, 
-              baking, eating 🍽, reading Scandi-Noir, starting knitting projects that I probably 
+              baking, eating 🍴, reading Scandi-Noir, starting knitting projects that I probably 
               won't finish, and bingeing my favorite shows. Recommendations for dark crime dramas, 
               anything vampire related, and unique eats in the DFW area are always welcome! 😝
             </p>
@@ -98,7 +95,7 @@ const IndexPage = () => {
              
             </p>
             <p className='section-copy'>
-              Anyway, if you made it this far, thank you and please, feel free to drop me a line! 
+              Anyway, if you made it this far, <span id='am-span4'>thank you</span> and please, feel free to drop me a line! 
             </p>
             <p className='section-copy' id='salutation'>
               Sincerely,              
@@ -107,7 +104,7 @@ const IndexPage = () => {
               Cassandra F. Smith
             </p>
           </div>
-          <h3 class="section-subheading">Tool Kit 🔧</h3>
+          <h2 class="section-title" id='toolkit-section-title'>Tool Kit 🔧</h2>
           <Toolkit />
         </div>     
 
@@ -138,7 +135,7 @@ const IndexPage = () => {
 
         <footer className='footer' id='footer'>
           <a href='#'><img id='logo' src={logo2} alt='logo' /></a>
-          <p className='footer-copy'>Designed & Developed by Cassandra F. Smith © 2023 😊</p>
+          <p className='footer-copy'>Designed & Built by Cassandra F. Smith © 2023 😊</p>
           <div className='social-icons'>
             {/*add onHover animation to the link icons*/}
             <a href='https://www.linkedin.com/in/cassandra-f-smith/' target='_blank' rel="noreferrer"><img className='social-logo grow' id='linkedIn-logo' src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-plain.svg" alt='linkedin icon'/></a>            
