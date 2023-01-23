@@ -123,7 +123,7 @@ const IndexPage = () => {
               <p>Please, feel free to reach out with any question or comments.</p>
             </div>
             <div id="contact-form" class="section-content">
-                      <form id="form" >
+                      <form id="form" method='POST' data-netlify='true' >
                           <input type="text" id="name" placeholder="Name" required/>
                           <input type="text" id="email" placeholder="Email" required/>
                           <textarea rows="10" column="80" placeholder="Enter your message here..." required></textarea>
