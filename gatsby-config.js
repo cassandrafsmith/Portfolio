@@ -6,8 +6,7 @@ module.exports = {
     siteUrl: `https://www.yourdomain.tld`,
     description: 'Cassandra Smith\'s Portfolio Site'   
   },
-  plugins: [
-    `gatsby-plugin-netlify`,
+  plugins: [    
     {
       resolve: `gatsby-omni-font-loader`,
       options: {
