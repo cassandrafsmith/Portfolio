@@ -7,6 +7,7 @@ module.exports = {
     description: 'Cassandra Smith\'s Portfolio Site'   
   },
   plugins: [
+    `gatsby-plugin-netlify`,
     {
       resolve: `gatsby-omni-font-loader`,
       options: {
