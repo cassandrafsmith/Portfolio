@@ -123,7 +123,7 @@ const IndexPage = () => {
               <p>Please, feel free to reach out with any question or comments.</p>
             </div>
             <div id="contact-form" class="section-content">
-              <form id="form" name='contact' method='POST' data-netlify='true' data-netlify-recaptcha="true" >
+              <form id="form" name='contact' method='POST' netlify='true' data-netlify-recaptcha="true" >
                 <input type="hidden" name="form-name" value="contact" />
                 <label>Your Name:</label>
                 <input type="text" name='name' id="name" placeholder="Name" required/>
