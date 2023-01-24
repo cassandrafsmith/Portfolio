@@ -120,7 +120,7 @@ const IndexPage = () => {
           <div id='form-section'>
             <div>
               <h1>Let's Connect!</h1>
-              <p>Please, feel free to reach out with any question or comments.</p>
+              <p>Please, feel free to reach out with any question or comments.</p>              
             </div>
             <div id="contact-form" class="section-content">
               <form 
@@ -128,7 +128,7 @@ const IndexPage = () => {
                 name='contact' 
                 method='POST' 
                 netlify='true'
-                action='/pages/form-submission' >
+                action='/form-submission' >
                 <input type="hidden" name="form-name" value="contact" />
                 <label>Your Name:</label>
                 <input type="text" name='name' id="name" placeholder="Name" required/>
