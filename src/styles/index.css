@@ -169,7 +169,7 @@ eventually...
 .contact-section {
     display: flex;
     flex-direction: column;    
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
     align-items: center;
 }
@@ -185,7 +185,8 @@ eventually...
 #form{
    display: flex;
    flex-direction: column;
-   width: 420px;
+   width: 26rem;
+   /* width: 420px; */
 
 }
 
@@ -227,7 +228,7 @@ label{
     box-shadow: 0 8px 5px rgba(0, 0, 0, 0.1);
 }
 
-.button:hover {
+.button:hover {    
     background-color: #aaaaaa69;
     border: 1px solid black;
 }
@@ -345,7 +346,7 @@ p{
     width:180px;
 }
 
-/* About Me Letter *******************************************************/
+/* Font: About Me Letter *******************************************************/
 .section-copy{
     text-align: left;
     margin-bottom: 1em; 
@@ -461,10 +462,7 @@ img{
 
 }
 
-.mockup{
-    width: 25rem;
-    height: auto;
-}
+
 
 .grow:hover {
     transition: all .2s ease-in-out;
@@ -486,12 +484,57 @@ img{
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
-
+    #logo{
+        width: 4rem;
+    height: auto;
+    }
+    .body-card{
+        width: 90%;
+    }
+    .scroll{
+        margin-right: -10%;
+    }
+    #portrait{
+        width: 30rem;
+        height: auto;     
+    }
+    .header-link{
+        font-size: 1.3em;
+    }
+    .header-link-ltr::before {
+        width: 0%;
+        bottom: 13px;
+    }
+    h1{
+        font-size: 5.6em; 
+    }    
+    
+   #intro-sub-title{
+    font-size: 1.2em;
+   }
+   .section-title{
+    font-size: 1.8em;
+   }
+   .intro-section{
+    margin: 0 0 1em 0;
+   }
 }
 
 /* Large devices (laptops/desktops, 1025px and up) */
 @media only screen and (min-width: 1025px) {
-
+    #portrait{
+        width: 37rem;
+        height: auto;     
+    }
+    #intro-title {
+        margin-right: -120px;
+    }
+    h1{
+        font-size: 6.3em; 
+    }
+    .form-section{
+        margin-bottom: 10rem;        
+    }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
