@@ -128,7 +128,7 @@ const IndexPage = () => {
                 name='contact' 
                 method='POST' 
                 netlify='true'
-                action='/form-submission.js' >
+                action='/pages/form-submission' >
                 <input type="hidden" name="form-name" value="contact" />
                 <label>Your Name:</label>
                 <input type="text" name='name' id="name" placeholder="Name" required/>
