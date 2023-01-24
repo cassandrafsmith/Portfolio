@@ -1,16 +1,10 @@
-
-/* 
-#e55646
-
-*/
-
 * {
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
 }
 
-/* Main Sections */
+/* Main Sections *********************************************************/
 .main {   
     display: flex;
     flex-direction: row;
@@ -37,7 +31,7 @@ eventually...
     
 }
 
-/* Header */
+/* Header ***************************************************************/
 .header{
     display: flex;
     flex-direction: row; 
@@ -78,7 +72,7 @@ eventually...
     width: 100%;
 }
 
-/* Sticky scroller Icon */
+/* Sticky scroller Icon *************************************************/
 .scroll{   
     position: sticky;
     top: 80vh;
@@ -130,7 +124,7 @@ eventually...
 
 }
 
-/*Intro Section*/
+/*Intro Section*********************************************************/
 .intro-section {    
     display: flex;
     flex-direction: row;
@@ -151,7 +145,7 @@ eventually...
     align-items: flex-end;
 }
 
-/*About Section*/
+/*About Section*********************************************************/
 .about-section {
     display: flex;
     flex-direction: column;
@@ -162,7 +156,7 @@ eventually...
     margin: 0 0 4em 0;
 }
 
-/*Projects Section*/
+/*Projects Section******************************************************/
 .projects-section {
     display: flex;
     flex-direction: column;
@@ -171,7 +165,7 @@ eventually...
     width: 100%;
 }
 
-/*Contact Section*/
+/*Contact Section******************************************************/
 .contact-section {
     display: flex;
     flex-direction: column;    
@@ -243,7 +237,7 @@ label{
     box-shadow: none;
 }
 
-/* Footer */
+/* Footer *********************************************************/
 .footer{
     display: flex;
     flex-direction: row;
@@ -265,7 +259,7 @@ label{
     font-family: 'Raleway',  san sarif;
 }
 
-/* Text */
+/* Text *********************************************************/
 
 h1 {   
     font-family: 'Pompiere',  san sarif;    
@@ -351,7 +345,7 @@ p{
     width:180px;
 }
 
-/* About Me Letter */
+/* About Me Letter *******************************************************/
 .section-copy{
     text-align: left;
     margin-bottom: 1em; 
@@ -438,7 +432,7 @@ a:active{
    
 }
 
-/* Images */
+/* Images ***********************************************************/
 /*removes the 3px margin at the bottom of the images*/
 img{
     vertical-align: middle;
@@ -475,4 +469,32 @@ img{
 .grow:hover {
     transition: all .2s ease-in-out;
     transform: scale(1.2);
+}
+
+/**************************MEDIA QUERIES********************************/
+/***********************************************************************/
+
+/* Extra small devices (phones, 480px and down) */
+@media only screen and (max-width: 480px) {
+
+}
+
+/* Small devices (portrait tablets and large phones, 481px and up) */
+@media only screen and (min-width: 481px) {
+
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+
+}
+
+/* Large devices (laptops/desktops, 1025px and up) */
+@media only screen and (min-width: 1025px) {
+
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+
 }
