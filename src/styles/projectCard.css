@@ -62,7 +62,20 @@
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
-
+    .project-card{
+        width: 95%;
+    }
+    .mockup{
+        width: 22rem;
+        height: auto;
+    }
+    .project-title{
+        margin: 1em 0 1em 0;
+        font-size: 1.5em;
+    }
+    .project-icons{
+        margin-bottom: 1em;
+    }
 }
 
 /* Large devices (laptops/desktops, 1025px and up) */

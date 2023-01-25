@@ -249,7 +249,10 @@ label{
 }
 
 .social-icons{
+    display: flex;
+    justify-content: flex-end;
     width: 200px;
+    
 }
 
 .footer-copy{
@@ -508,7 +511,9 @@ img{
     h1{
         font-size: 5.6em; 
     }    
-    
+    .contact-title{
+        font-size: 5.2em;
+    }
    #intro-sub-title{
     font-size: 1.2em;
    }
@@ -517,7 +522,13 @@ img{
    }
    .intro-section{
     margin: 0 0 1em 0;
-   }
+   }   
+   .form-section{
+    margin-bottom: 10rem;        
+}
+    .social-icons{
+        width: 115px;
+    }
 }
 
 /* Large devices (laptops/desktops, 1025px and up) */
