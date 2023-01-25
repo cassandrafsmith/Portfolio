@@ -117,10 +117,10 @@ const IndexPage = () => {
 
         <div className='contact-section' id='contact'> 
         <h2 className='section-title' id='contact-section-title' data-aos='fade-right'>Contact 💜</h2> 
-          <div id='form-section'>
+          <div className='form-section' id='form-section'>
             <div>
-              <h1>Let's Connect!</h1>
-              <p>Please, feel free to reach out with any question or comments.</p>              
+              <h1 className='contact-title'>Let's Connect!</h1>
+              <p className='contact-sub-title' >Please, feel free to reach out with any question or comments.</p>              
             </div>
             <div id="contact-form" class="section-content">
               <form 

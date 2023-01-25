@@ -13,6 +13,11 @@
     border: 1px solid rgba(255, 255, 255, 1);   
 }
 
+.mockup{
+    width: 25rem;
+    height: auto;
+}
+
 .project-info{
     display: flex;
     flex-direction: column;
@@ -43,4 +48,55 @@
 
 .project-description, .tools-used{
     margin: 0 0 1.5em 0;
+}
+
+/* Extra small devices (phones, 480px and down) */
+@media only screen and (max-width: 480px) {
+
+}
+
+/* Small devices (portrait tablets and large phones, 481px and up) */
+@media only screen and (min-width: 481px) {
+
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .project-card{
+        width: 95%;
+    }
+    .mockup{
+        width: 22rem;
+        height: auto;
+    }
+    .project-title{
+        margin: 1em 0 1em 0;
+        font-size: 1.5em;
+    }
+    .project-icons{
+        margin-bottom: 1em;
+    }
+}
+
+/* Large devices (laptops/desktops, 1025px and up) */
+@media only screen and (min-width: 1025px) {
+    .project-card{
+        width: 85%;
+    }
+    .mockup{
+        width: 22rem;
+        height: auto;
+    }
+    .project-title{
+        margin: 1em 0 1em 0;
+        font-size: 1.5em;
+    }
+    .project-icons{
+        margin-bottom: 1em;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+
 }

@@ -1,16 +1,10 @@
-
-/* 
-#e55646
-
-*/
-
 * {
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
 }
 
-/* Main Sections */
+/* Main Sections *********************************************************/
 .main {   
     display: flex;
     flex-direction: row;
@@ -37,7 +31,7 @@ eventually...
     
 }
 
-/* Header */
+/* Header ***************************************************************/
 .header{
     display: flex;
     flex-direction: row; 
@@ -78,7 +72,7 @@ eventually...
     width: 100%;
 }
 
-/* Sticky scroller Icon */
+/* Sticky scroller Icon *************************************************/
 .scroll{   
     position: sticky;
     top: 80vh;
@@ -130,7 +124,7 @@ eventually...
 
 }
 
-/*Intro Section*/
+/*Intro Section*********************************************************/
 .intro-section {    
     display: flex;
     flex-direction: row;
@@ -151,7 +145,7 @@ eventually...
     align-items: flex-end;
 }
 
-/*About Section*/
+/*About Section*********************************************************/
 .about-section {
     display: flex;
     flex-direction: column;
@@ -162,7 +156,7 @@ eventually...
     margin: 0 0 4em 0;
 }
 
-/*Projects Section*/
+/*Projects Section******************************************************/
 .projects-section {
     display: flex;
     flex-direction: column;
@@ -171,11 +165,11 @@ eventually...
     width: 100%;
 }
 
-/*Contact Section*/
+/*Contact Section******************************************************/
 .contact-section {
     display: flex;
     flex-direction: column;    
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
     align-items: center;
 }
@@ -191,7 +185,8 @@ eventually...
 #form{
    display: flex;
    flex-direction: column;
-   width: 420px;
+   width: 26rem;
+   /* width: 420px; */
 
 }
 
@@ -233,7 +228,7 @@ label{
     box-shadow: 0 8px 5px rgba(0, 0, 0, 0.1);
 }
 
-.button:hover {
+.button:hover {    
     background-color: #aaaaaa69;
     border: 1px solid black;
 }
@@ -243,7 +238,7 @@ label{
     box-shadow: none;
 }
 
-/* Footer */
+/* Footer *********************************************************/
 .footer{
     display: flex;
     flex-direction: row;
@@ -254,7 +249,10 @@ label{
 }
 
 .social-icons{
+    display: flex;
+    justify-content: flex-end;
     width: 200px;
+    
 }
 
 .footer-copy{
@@ -265,7 +263,7 @@ label{
     font-family: 'Raleway',  san sarif;
 }
 
-/* Text */
+/* Text *********************************************************/
 
 h1 {   
     font-family: 'Pompiere',  san sarif;    
@@ -351,7 +349,7 @@ p{
     width:180px;
 }
 
-/* About Me Letter */
+/* Font: About Me Letter *******************************************************/
 .section-copy{
     text-align: left;
     margin-bottom: 1em; 
@@ -438,7 +436,7 @@ a:active{
    
 }
 
-/* Images */
+/* Images ***********************************************************/
 /*removes the 3px margin at the bottom of the images*/
 img{
     vertical-align: middle;
@@ -467,12 +465,90 @@ img{
 
 }
 
-.mockup{
-    width: 25rem;
-    height: auto;
-}
+
 
 .grow:hover {
     transition: all .2s ease-in-out;
     transform: scale(1.2);
+}
+
+/**************************MEDIA QUERIES********************************/
+/***********************************************************************/
+
+/* Extra small devices (phones, 480px and down) */
+@media only screen and (max-width: 480px) {
+
+}
+
+/* Small devices (portrait tablets and large phones, 481px and up) */
+@media only screen and (min-width: 481px) {
+
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    #logo{
+        width: 4rem;
+    height: auto;
+    }
+    .body-card{
+        width: 90%;
+    }
+    .scroll{
+        margin-right: -10%;
+    }
+    #portrait{
+        width: 30rem;
+        height: auto;     
+    }
+    .header-link{
+        font-size: 1.3em;
+    }
+    .header-link-ltr::before {
+        width: 0%;
+        bottom: 13px;
+    }
+    h1{
+        font-size: 5.6em; 
+    }    
+    .contact-title{
+        font-size: 5.2em;
+    }
+   #intro-sub-title{
+    font-size: 1.2em;
+   }
+   .section-title{
+    font-size: 1.8em;
+   }
+   .intro-section{
+    margin: 0 0 1em 0;
+   }   
+   .form-section{
+    margin-bottom: 10rem;        
+}
+    .social-icons{
+        width: 115px;
+    }
+}
+
+/* Large devices (laptops/desktops, 1025px and up) */
+@media only screen and (min-width: 1025px) {
+    #portrait{
+        width: 37rem;
+        height: auto;     
+    }
+    #intro-title {
+        margin-right: -120px;
+    }
+    h1{
+        font-size: 6.3em; 
+    }
+    .form-section{
+        margin-bottom: 10rem;        
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+
 }
