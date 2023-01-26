@@ -84,7 +84,7 @@ eventually...
 #scroller{
     width: 40px;
     height: auto; 
-    animation: blink 5s linear infinite;   
+    animation: blink 3s linear infinite;   
 }  
 
 @keyframes blink {
@@ -523,11 +523,35 @@ img{
    .intro-section{
     margin: 0 0 1em 0;
    }   
-   .form-section{
-    margin-bottom: 10rem;        
+   #form-section{
+    margin: 0 0 10rem 0;       
 }
     .social-icons{
         width: 115px;
+    }
+}
+
+/* Medium devices on portrait */
+@media only screen and (min-width: 768px)
+and (orientation : portrait) 
+{
+    .intro-section{
+        flex-direction: column;
+        align-items: center;
+    }
+    #intro-title{
+        text-align: center;
+        margin: 0;
+    }
+    #intro-sub-title{
+        text-align: center;
+    }
+    #portrait{
+        width: 45rem;
+        height: auto; 
+    }
+    .contact-section{
+        min-height: 60vh;
     }
 }
 
