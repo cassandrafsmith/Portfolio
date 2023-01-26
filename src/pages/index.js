@@ -2,6 +2,7 @@ import * as React from "react";
 import { useEffect }from 'react';
 import { Link } from 'gatsby';
 import ProjectCard from "../components/projectCard";
+import ProjectCardMobile from "../components/projectCardMobile";
 import Toolkit from "../components/toolkit";
 import './../styles/index.css';
 import logo from './../images/Black and White Minimal Monogram Logo.svg';
@@ -110,7 +111,7 @@ const IndexPage = () => {
 
         <div className='projects-section' id='projects'> 
           <h2 className='section-title' id="project-section-title" data-aos='fade-right'>Projects 💜</h2> 
-          <ProjectCard props={projectCardInfo[0]} />
+          <ProjectCardMobile props={projectCardInfo[0]} />
           <ProjectCard props={projectCardInfo[1]} />
           <ProjectCard props={projectCardInfo[2]} />
         </div> 

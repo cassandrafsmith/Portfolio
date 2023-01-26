@@ -482,14 +482,54 @@ img{
 
 /* Small devices (portrait tablets and large phones, 481px and up) */
 @media only screen and (min-width: 481px) {
-
+    .intro-section{
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+    }
+    #intro-title{
+        font-size: 3.6em; 
+        text-align: center;
+        margin: 0;
+    }
+    #intro-sub-title{
+        text-align: center;
+        font-size: 1em;
+    }
+    #portrait{
+        width: 25rem;
+        height: auto; 
+    }  
+    .about-section{
+        margin-bottom: 0;
+    }  
+    .contact-section{
+        min-height: 0vh;
+    }
+    #form-section{
+        flex-direction: column;
+        margin: 2rem 0 6rem 0;
+    }
+    #form{
+        width: 100%;
+        margin-top: 2rem;
+    }
+    .contact-title{
+        font-size: 4.6em; 
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+    .contact-sub-title{
+        width: 95%;
+       text-align: center;
+    }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
     #logo{
         width: 4rem;
-    height: auto;
+        height: auto;
     }
     .body-card{
         width: 90%;
