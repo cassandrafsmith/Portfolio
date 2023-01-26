@@ -17,7 +17,7 @@ export const projectCardInfo =[
         mockup: mockupOne,
     },
     {       
-        title: 'Website Build2',
+        title: 'Website Build',
         description: `For this project I, along with my
         capstone team members, built a complete website
         rebuild for Decentralized Technologies, a 

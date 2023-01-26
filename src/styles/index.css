@@ -481,7 +481,8 @@ img{
 }
 
 /* Small devices (portrait tablets and large phones, 481px and up) */
-@media only screen and (min-width: 481px) {
+@media only screen and (min-width: 481px) 
+and (max-width: 767px){
     .intro-section{
         flex-direction: column;
         align-items: center;
@@ -526,7 +527,8 @@ img{
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) 
+and (max-width:1024px) {
     #logo{
         width: 4rem;
         height: auto;
@@ -562,6 +564,7 @@ img{
    }
    .intro-section{
     margin: 0 0 1em 0;
+    flex-direction: row;
    }   
    #form-section{
     margin: 0 0 10rem 0;       
@@ -571,8 +574,9 @@ img{
     }
 }
 
-/* Medium devices on portrait */
-@media only screen and (min-width: 768px)
+/*Medium devices on portrait */
+ @media only screen and (min-width: 768px)
+and (max-width: 1024px)
 and (orientation : portrait) 
 {
     .intro-section{
@@ -596,7 +600,8 @@ and (orientation : portrait)
 }
 
 /* Large devices (laptops/desktops, 1025px and up) */
-@media only screen and (min-width: 1025px) {
+@media only screen and (min-width: 1025px)
+and (max-width: 1199px)  {
     #portrait{
         width: 37rem;
         height: auto;     
@@ -614,5 +619,7 @@ and (orientation : portrait)
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
-
+    .body-card{
+        width: 70%;
+    }
 }
