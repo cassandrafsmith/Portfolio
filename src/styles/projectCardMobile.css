@@ -1,0 +1,114 @@
+.project-card-mobile{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 80%;
+    margin: 0 auto 3rem auto;    
+    background: #ffffff69;    
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5.7px);
+    -webkit-backdrop-filter: blur(5.7px);
+    border: 1px solid rgba(255, 255, 255, 1);   
+}
+
+.mockup-mobile{
+    width: 25rem;
+    height: auto;
+}
+
+.project-info-mobile{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 0 0 1.5rem;    
+}
+
+.project-card-mobile:hover {
+    transition: all .2s ease-in-out;
+}
+
+.project-card-mobile:hover {
+    transform: scale(1.03);
+} 
+
+.grow:hover {
+    transition: all .2s ease-in-out;
+}
+
+.grow:hover {
+    transform: scale(1.2);
+} 
+
+.project-title-mobile{
+    margin: 0 0 1em 0;
+    font-size: 1.5em;
+}
+
+.project-description-mobile, .tools-used-mobile{
+    margin: 0 0 1.5em 0;
+}
+
+@media only screen and (max-width: 480px) {    
+    .project-card-mobile{
+        flex-direction: column;
+        align-items: center;
+        width: 95%;
+    }
+    .project-info-mobile{
+        margin: 0;
+    }
+    .project-title-mobile{
+        margin: 1rem 0 -4rem 0; /*change this bottom margin after resizing image!!!******/
+    }
+    .mockup-mobile{
+        width: 16rem;
+        height: auto;
+    }
+    .project-description-mobile, .tools-used-mobile{
+        text-align: center;
+        margin: 1rem;
+    }
+    .project-icons-mobile{
+        display: flex;
+        justify-content: center;
+        margin: 1rem 0 2rem 0;
+    }
+    .icon{
+        margin: 0 2rem;
+    }
+}
+
+
+
+/* Small devices (portrait tablets and large phones, 481px and up) */
+@media only screen and (min-width: 481px) 
+and (max-width: 766px) {
+    .project-card-mobile{
+        flex-direction: column;
+        align-items: center;
+        width: 95%;
+    }
+    .project-info-mobile{
+        margin: 0;
+    }
+    .project-title-mobile{
+        margin: 1rem 0 -4rem 0; /*change this bottom margin after resizing image!!!******/
+    }
+    .mockup-mobile{
+        width: 20rem;
+        height: auto;
+    }
+    .project-description-mobile, .tools-used-mobile{
+        text-align: center;
+        margin: 1rem;
+    }
+    .project-icons-mobile{
+        display: flex;
+        justify-content: center;
+        margin: 1rem 0 2rem 0;
+    }
+    .icon{
+        margin: 0 2rem;
+    }
+}

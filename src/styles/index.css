@@ -72,6 +72,34 @@ eventually...
     width: 100%;
 }
 
+/* Mobile Header ***************************************************************/
+
+#mobile-header{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+   justify-content: space-between;
+}
+.header-icon{
+    width: 3rem;
+    height: auto;   
+}
+.mobile-header-menu{
+    display: flex;
+    flex-direction: row;
+}
+
+.mobile-header-btn{
+    background-color: transparent;
+    border: none;
+    margin-left: auto;
+}
+.mobile-header-list{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 /* Sticky scroller Icon *************************************************/
 .scroll{   
     position: sticky;
@@ -84,7 +112,10 @@ eventually...
 #scroller{
     width: 40px;
     height: auto; 
-    animation: blink 3s linear infinite;   
+    background-color: #ffffff69;
+    border-radius: 50px;
+    
+    /* animation: blink 3s linear infinite;    */
 }  
 
 @keyframes blink {
@@ -465,8 +496,6 @@ img{
 
 }
 
-
-
 .grow:hover {
     transition: all .2s ease-in-out;
     transform: scale(1.2);
@@ -477,19 +506,161 @@ img{
 
 /* Extra small devices (phones, 480px and down) */
 @media only screen and (max-width: 480px) {
-
+    .body-card{
+        width: 95%;
+    }
+    .scroll{
+        margin-right: 1rem;
+        z-index: 2;
+        
+    }
+    #logo{
+        width: 3.2rem;
+        height: auto;
+    }
+    .intro-section{
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+    }
+    #intro-title{
+        font-size: 3.2em; 
+        text-align: center;
+        margin: 0;
+    }
+    #intro-sub-title{
+        text-align: center;
+        font-size: 1em;
+    }
+    #portrait{
+        width: 18rem;
+        height: auto; 
+    }  
+    .section-title{
+        font-size: 1.6em;
+    }
+    p{
+        font-size: 0.9em;
+    }
+    #greeting{
+        margin-left: 1em;
+    }
+    #salutation{
+        margin-left: 1em;
+    }
+    #signture{
+        font-size: .9em;
+    }
+    .about-section{
+        margin-bottom: 0;
+    }  
+    .contact-section{
+        min-height: 0vh;
+    }
+    #form-section{
+        flex-direction: column;
+        margin: 2rem 0 6rem 0;
+    }
+    #form{
+        width: 100%;
+        margin-top: 2rem;
+    }
+    .contact-title{
+        font-size: 3.6em; 
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+    .contact-sub-title{
+        width: 95%;
+       text-align: center;
+    }
+    #am-span1::before{
+        width: 185px;
+    }
+    
+    #am-span2::before{
+        width: 225px;
+    }
+    
+    #am-span3::before{
+        width: 198px;
+    }
+    #am-span4::before{
+        width: 66px;
+    }
+    #about-section-title::before {
+        width:180px;
+    }
+    
+    #toolkit-section-title::before {
+        width:145px;
+    }
+    
+    #project-section-title::before {
+        width:160px;
+    }
+    
+    #contact-section-title::before {
+        width:155px;
+    }
 }
 
 /* Small devices (portrait tablets and large phones, 481px and up) */
-@media only screen and (min-width: 481px) {
-
+@media only screen and (min-width: 481px) 
+and (max-width: 767px){
+    #logo{
+        width: 4rem;
+        height: auto;
+    }
+    .intro-section{
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+    }
+    #intro-title{
+        font-size: 3.6em; 
+        text-align: center;
+        margin: 0;
+    }
+    #intro-sub-title{
+        text-align: center;
+        font-size: 1em;
+    }
+    #portrait{
+        width: 25rem;
+        height: auto; 
+    }  
+    .about-section{
+        margin-bottom: 0;
+    }  
+    .contact-section{
+        min-height: 0vh;
+    }
+    #form-section{
+        flex-direction: column;
+        margin: 2rem 0 6rem 0;
+    }
+    #form{
+        width: 100%;
+        margin-top: 2rem;
+    }
+    .contact-title{
+        font-size: 4.6em; 
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+    .contact-sub-title{
+        width: 95%;
+       text-align: center;
+    }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) 
+and (max-width:1024px) {
     #logo{
         width: 4rem;
-    height: auto;
+        height: auto;
     }
     .body-card{
         width: 90%;
@@ -522,6 +693,7 @@ img{
    }
    .intro-section{
     margin: 0 0 1em 0;
+    flex-direction: row;
    }   
    #form-section{
     margin: 0 0 10rem 0;       
@@ -531,10 +703,15 @@ img{
     }
 }
 
-/* Medium devices on portrait */
-@media only screen and (min-width: 768px)
+/*Medium devices on portrait */
+ @media only screen and (min-width: 768px)
+and (max-width: 1024px)
 and (orientation : portrait) 
 {
+    #logo{
+        width: 4rem;
+        height: auto;
+    }
     .intro-section{
         flex-direction: column;
         align-items: center;
@@ -556,7 +733,8 @@ and (orientation : portrait)
 }
 
 /* Large devices (laptops/desktops, 1025px and up) */
-@media only screen and (min-width: 1025px) {
+@media only screen and (min-width: 1025px)
+and (max-width: 1199px)  {
     #portrait{
         width: 37rem;
         height: auto;     
@@ -573,6 +751,22 @@ and (orientation : portrait)
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1200px)
+and (max-width: 1600px) {
+    .body-card{
+        width: 70%;
+    }
+}
+/* Super Large Desktops: will also probably need to adjust images, font size, etc. */
+@media only screen and (min-width: 1601px)
+and (max-width:2000px) {
+    .body-card{
+        width: 60%;
+    }
+}
 
+@media only screen and (min-width: 2001px) {
+    .body-card{
+        width: 50%;
+    }
 }

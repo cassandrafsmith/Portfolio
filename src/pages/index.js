@@ -1,7 +1,10 @@
 import * as React from "react";
-import { useEffect }from 'react';
+import { useEffect, useState }from 'react';
 import { Link } from 'gatsby';
+import Header from "../components/header"
+import MobileHeader from '../components/mobileHeader';
 import ProjectCard from "../components/projectCard";
+import ProjectCardMobile from "../components/projectCardMobile";
 import Toolkit from "../components/toolkit";
 import './../styles/index.css';
 import logo from './../images/Black and White Minimal Monogram Logo.svg';
@@ -16,9 +19,23 @@ import {projectCardInfo} from './../assets/projectCardInfo.js';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
+const IndexPage = () => {  
 
+  //funtion to detect if we are on the server or not for SSR in Gatsby
+  const useIsSsr = () =>{
+    const [isSsr, setSsr] = useState(true);
 
-const IndexPage = () => {
+    //useEffect does not run on the server, so if this is hit, we are on the client.
+    useEffect(() => {
+      setSsr(false);
+    })
+    return isSsr;
+  }
+  //use useIsSrs to check whether we are server-side or in the client
+  const isServer = useIsSsr();
+  const [small, setSmall] = useState(isServer ? null : window.innerWidth < 767); 
+  const [header, setHeader]  = useState(isServer ? null : window.innerWidth < 650);
+
   useEffect(() => {
     AOS.init({
         duration: 1200,
@@ -27,22 +44,37 @@ const IndexPage = () => {
     });
   }, []);
 
+  
+
+
+  //update state comparing screen size
+  const updateSize = () => {
+    setSmall(window.innerWidth < 767);
+  };
+
+  useEffect(() => {
+    window.addEventListener('resize', updateSize);
+    return () => window.removeEventListener('resize', updateSize);
+  })
+
+  //update header from standard to mobile
+  const updateHeader = () => {
+    setHeader(window.innerWidth < 650);
+  };
+
+  useEffect(() => {
+    window.addEventListener('resize', updateHeader);
+    return () => window.removeEventListener('resize', updateHeader);
+  })
 
   return (      
     <div className='main'> 
-
       <div className='body-card'>
-
-        <header className='header'>              
-            <img id='logo' src={logo2} alt='logo' />
-            <ul className='header-list'>       
-              <li className='header-link header-link-ltr'><Link to='#about'>About</Link></li>       
-              <li className='header-link header-link-ltr'><Link to='#projects'>Projects</Link></li>
-              <li className='header-link header-link-ltr'><Link to='#contact'>Contact</Link></li>
-              <li className='header-link header-link-ltr'><a href={resume} target='_blank' rel='noreferrer'>Resume</a></li>
-            </ul>         
-        </header> 
-
+        {header ?
+          <MobileHeader />
+          :
+          <Header />
+        }   
         <div className='intro-section' id='intro'> 
           <div className='intro-copy'>
             <h1 className='title' id="intro-title"
@@ -110,9 +142,19 @@ const IndexPage = () => {
 
         <div className='projects-section' id='projects'> 
           <h2 className='section-title' id="project-section-title" data-aos='fade-right'>Projects 💜</h2> 
-          <ProjectCard props={projectCardInfo[0]} />
-          <ProjectCard props={projectCardInfo[1]} />
-          <ProjectCard props={projectCardInfo[2]} />
+          {small ? 
+            <>
+              <ProjectCardMobile props={projectCardInfo[0]} />
+              <ProjectCardMobile props={projectCardInfo[1]} />
+              <ProjectCardMobile props={projectCardInfo[2]} />
+            </>
+           : 
+            <>
+              <ProjectCard props={projectCardInfo[0]} />
+              <ProjectCard props={projectCardInfo[1]} />
+              <ProjectCard props={projectCardInfo[2]} />
+            </>
+           }          
         </div> 
 
         <div className='contact-section' id='contact'> 
