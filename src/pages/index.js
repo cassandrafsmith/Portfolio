@@ -20,6 +20,17 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 const IndexPage = () => {  
+
+  //funtion to detect if we are on the server or not for SSR in Gatsby
+  const useIsSsr = () =>{
+    const [isSsr, setSsr] = useState(true);
+
+    //useEffect does not run on the server, so if this is hit, we are on the client.
+    useEffect(() => {
+      setSsr(false);
+    })
+    return isSsr;
+  }
   //use useIsSrs to check whether we are server-side or in the client
   const isServer = useIsSsr();
   const [small, setSmall] = useState(isServer ? null : window.innerWidth < 767); 
@@ -33,16 +44,7 @@ const IndexPage = () => {
     });
   }, []);
 
-  //funtion to detect if we are on the server or not for SSR in Gatsby
- const useIsSsr = () =>{
-    const [isSsr, setSsr] = useState(true);
-
-    //useEffect does not run on the server, so if this is hit, we are on the client.
-    useEffect(() => {
-      setSsr(false);
-    })
-    return isSsr;
- }
+  
 
 
   //update state comparing screen size
