@@ -20,8 +20,8 @@ import 'aos/dist/aos.css';
 const isBrowser = typeof window !== 'undefined';
 
 const IndexPage = () => {    
-  const [card, setCard] = useState(isBrowser ? null : window.innerWidth < 767); 
-  const [header, setHeader]  = useState(isBrowser ? null : window.innerWidth < 650);
+  const [card, setCard] = useState(isBrowser ? window.innerWidth < 767 : null); 
+  const [header, setHeader]  = useState(isBrowser ? window.innerWidth < 650: null);
 
   //update state depending on screen size
   const updateSize = () => {
