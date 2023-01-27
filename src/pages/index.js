@@ -21,7 +21,7 @@ import 'aos/dist/aos.css';
 
 const IndexPage = () => {  
   //use useIsSrs to check whether we are server-side or in the client
-  const isServer = useIsSrs();
+  const isServer = useIsSsr();
   const [small, setSmall] = useState(isServer ? null : window.innerWidth < 767); 
   const [header, setHeader]  = useState(isServer ? null : window.innerWidth < 650);
 
@@ -39,7 +39,7 @@ const IndexPage = () => {
 
     //useEffect does not run on the server, so if this is hit, we are on the client.
     useEffect(() => {
-      setIsSsr(false);
+      setSsr(false);
     })
     return isSsr;
  }
