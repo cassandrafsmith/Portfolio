@@ -19,9 +19,11 @@ import {projectCardInfo} from './../assets/projectCardInfo.js';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
-const IndexPage = () => {
-  const [small, setSmall] = useState(window.innerWidth < 767); 
-  const [header, setHeader]  = useState(window.innerWidth < 650);
+const IndexPage = () => {  
+  //use useIsSrs to check whether we are server-side or in the client
+  const isServer = useIsSrs();
+  const [small, setSmall] = useState(isServer ? null : window.innerWidth < 767); 
+  const [header, setHeader]  = useState(isServer ? null : window.innerWidth < 650);
 
   useEffect(() => {
     AOS.init({
@@ -30,6 +32,18 @@ const IndexPage = () => {
         once: true,       
     });
   }, []);
+
+  //funtion to detect if we are on the server or not for SSR in Gatsby
+ const useIsSsr = () =>{
+    const [isSsr, setSsr] = useState(true);
+
+    //useEffect does not run on the server, so if this is hit, we are on the client.
+    useEffect(() => {
+      setIsSsr(false);
+    })
+    return isSsr;
+ }
+
 
   //update state comparing screen size
   const updateSize = () => {
