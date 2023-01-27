@@ -230,7 +230,7 @@ input, textarea{
     /* background-color: #F8BCCC; */
     box-shadow: 0 8px 5px rgba(0, 0, 0, 0.1);
     resize: none;
-    
+    font-size: 16px;
 }
 
 label{

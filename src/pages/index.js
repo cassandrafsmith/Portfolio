@@ -1,40 +1,39 @@
 import * as React from "react";
 import { useEffect, useState }from 'react';
-import { Link } from 'gatsby';
 import Header from "../components/header"
 import MobileHeader from '../components/mobileHeader';
 import ProjectCard from "../components/projectCard";
 import ProjectCardMobile from "../components/projectCardMobile";
 import Toolkit from "../components/toolkit";
 import './../styles/index.css';
-import logo from './../images/Black and White Minimal Monogram Logo.svg';
 import logo2 from './../images/black_and_white_logo.svg';
 import scroll from './../images/arrow_upward_FILL0_wght400_GRAD0_opsz48.svg'
 import appleTouchIcon from './../images/favicon/apple-touch-icon.png';
 import icon16 from "./../images/favicon/favicon-16x16.png";
 import icon32 from "./../images/favicon/favicon-32x32.png";
 import portrait from './../images/Portrait.png';
-import resume from './../assets/resumeCassandraSmith.pdf';
 import {projectCardInfo} from './../assets/projectCardInfo.js';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
-const IndexPage = () => {  
+//check if rendering in browser to use window.innerWidth
+const isBrowser = typeof window !== 'undefined';
 
-  //funtion to detect if we are on the server or not for SSR in Gatsby
-  const useIsSsr = () =>{
-    const [isSsr, setSsr] = useState(true);
+const IndexPage = () => {    
+  const [card, setCard] = useState(isBrowser ? window.innerWidth < 767 : null); 
+  const [header, setHeader]  = useState(isBrowser ? window.innerWidth < 650: null);
 
-    //useEffect does not run on the server, so if this is hit, we are on the client.
-    useEffect(() => {
-      setSsr(false);
-    })
-    return isSsr;
-  }
-  //use useIsSrs to check whether we are server-side or in the client
-  const isServer = useIsSsr();
-  const [small, setSmall] = useState(isServer ? null : window.innerWidth < 767); 
-  const [header, setHeader]  = useState(isServer ? null : window.innerWidth < 650);
+  //update state depending on screen size
+  const updateSize = () => {
+    setCard(window.innerWidth < 767);
+    setHeader(window.innerWidth < 650);
+  };
+
+  //listen for resize events
+  useEffect(() => {
+    window.addEventListener('resize', updateSize);
+    return () => window.removeEventListener('resize', updateSize);
+  })  
 
   useEffect(() => {
     AOS.init({
@@ -43,38 +42,16 @@ const IndexPage = () => {
         once: true,       
     });
   }, []);
-
   
-
-
-  //update state comparing screen size
-  const updateSize = () => {
-    setSmall(window.innerWidth < 767);
-  };
-
-  useEffect(() => {
-    window.addEventListener('resize', updateSize);
-    return () => window.removeEventListener('resize', updateSize);
-  })
-
-  //update header from standard to mobile
-  const updateHeader = () => {
-    setHeader(window.innerWidth < 650);
-  };
-
-  useEffect(() => {
-    window.addEventListener('resize', updateHeader);
-    return () => window.removeEventListener('resize', updateHeader);
-  })
-
   return (      
     <div className='main'> 
       <div className='body-card'>
+      
         {header ?
           <MobileHeader />
-          :
+          :          
           <Header />
-        }   
+        }           
         <div className='intro-section' id='intro'> 
           <div className='intro-copy'>
             <h1 className='title' id="intro-title"
@@ -142,7 +119,7 @@ const IndexPage = () => {
 
         <div className='projects-section' id='projects'> 
           <h2 className='section-title' id="project-section-title" data-aos='fade-right'>Projects 💜</h2> 
-          {small ? 
+          {card ? 
             <>
               <ProjectCardMobile props={projectCardInfo[0]} />
               <ProjectCardMobile props={projectCardInfo[1]} />
