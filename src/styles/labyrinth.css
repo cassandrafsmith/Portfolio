@@ -1,0 +1,42 @@
+#labyrinth-page{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height:;
+    align-items: center;    
+}
+
+.iframe-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    Margin-top: 5rem;
+}
+
+#close{   
+    top: 2rem;
+    right: 2rem;
+    position: absolute;    
+}
+
+.game-info{
+    width: 65%;
+    display: flex;
+    flex-direction: column;    
+    align-items: center;
+}
+
+.game-title{
+    margin: 1em 0;    
+    font-size: 3em;
+}
+
+.team{
+    font-size: 1.5em;
+    margin: 2em;
+}
+.team-members{
+    margin-bottom: 5em;
+}
+
+
