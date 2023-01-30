@@ -2,7 +2,6 @@ import React from 'react';
 import {useState } from 'react';
 import { Link } from 'gatsby';
 import './../styles/index.css';
-import './../styles/mobileHeader.css';
 import resume from './../assets/resumeCassandraSmith.pdf';
 import logo2 from './../images/black_and_white_logo.svg';
 import hamburger from './../images/menu_FILL0_wght400_GRAD0_opsz48.svg';
