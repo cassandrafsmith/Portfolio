@@ -1,6 +1,6 @@
 .project-card-mobile{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
     width: 80%;
     margin: 0 auto 3rem auto;    
@@ -41,7 +41,7 @@
 } 
 
 .project-title-mobile{
-    margin: 0 0 1em 0;
+    margin-top: 1rem;
     font-size: 1.5em;
 }
 
@@ -59,7 +59,7 @@
         margin: 0;
     }
     .project-title-mobile{
-        margin: 1rem 0 -4rem 0; /*change this bottom margin after resizing image!!!******/
+        margin-top: 1rem; 
     }
     .mockup-mobile{
         width: 16rem;
@@ -93,7 +93,7 @@ and (max-width: 766px) {
         margin: 0;
     }
     .project-title-mobile{
-        margin: 1rem 0 -4rem 0; /*change this bottom margin after resizing image!!!******/
+        margin-top: 1rem ; 
     }
     .mockup-mobile{
         width: 20rem;
