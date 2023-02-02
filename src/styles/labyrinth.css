@@ -1,8 +1,7 @@
 #labyrinth-page{
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    height:;
+    justify-content: center;  
     align-items: center;    
 }
 
@@ -39,10 +38,7 @@
     margin-bottom: 5em;
 }
 
-iframe{
-    width: ;
-    height: ;
-}
+
 
 /*******************MEDIA QUERIES********************/
 

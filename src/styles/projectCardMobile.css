@@ -41,7 +41,7 @@
 } 
 
 .project-title-mobile{
-    margin-top: 1rem;
+    margin: 1rem;
     font-size: 1.5em;
 }
 
@@ -57,10 +57,7 @@
     }
     .project-info-mobile{
         margin: 0;
-    }
-    .project-title-mobile{
-        margin-top: 1rem; 
-    }
+    }    
     .mockup-mobile{
         width: 16rem;
         height: auto;
@@ -91,10 +88,7 @@ and (max-width: 766px) {
     }
     .project-info-mobile{
         margin: 0;
-    }
-    .project-title-mobile{
-        margin-top: 1rem ; 
-    }
+    }    
     .mockup-mobile{
         width: 20rem;
         height: auto;
