@@ -15,7 +15,7 @@ export const projectCardInfo =[
         public facing website, along with admin, 
         employee, and client dashboards.`,
         tools: 'React • ReactRouter • Node.js • Express • PostgreSQL',
-        github: 'https://github.com/KSU-Capstone-22/decentralized-tech-website',
+        github: 'https://github.com/KSU-Capstone-22',
         url: 'https://decentralizedtech.org/',
         mockup: dtMockup352,
     },
