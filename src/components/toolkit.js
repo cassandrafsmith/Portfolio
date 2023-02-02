@@ -20,6 +20,10 @@ const Toolkit = () =>{
             url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original-wordmark.svg',
         },
         {
+            alt: 'C++',
+            url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg',
+        },
+        {
             alt: 'React',
             url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original-wordmark.svg',
         },
