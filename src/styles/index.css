@@ -1,16 +1,10 @@
-
-/* 
-#e55646
-
-*/
-
 * {
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
 }
 
-/* Main Sections */
+/* Main Sections *********************************************************/
 .main {   
     display: flex;
     flex-direction: row;
@@ -37,7 +31,7 @@ eventually...
     
 }
 
-/* Header */
+/* Header ***************************************************************/
 .header{
     display: flex;
     flex-direction: row; 
@@ -78,7 +72,35 @@ eventually...
     width: 100%;
 }
 
-/* Sticky scroller Icon */
+/* Mobile Header ***************************************************************/
+
+#mobile-header{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+   justify-content: space-between;
+}
+.header-icon{
+    width: 3rem;
+    height: auto;   
+}
+.mobile-header-menu{
+    display: flex;
+    flex-direction: row;
+}
+
+.mobile-header-btn{
+    background-color: transparent;
+    border: none;
+    margin-left: auto;
+}
+.mobile-header-list{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Sticky scroller Icon *************************************************/
 .scroll{   
     position: sticky;
     top: 80vh;
@@ -90,7 +112,10 @@ eventually...
 #scroller{
     width: 40px;
     height: auto; 
-    animation: blink 5s linear infinite;   
+    background-color: #ffffff69;
+    border-radius: 50px;
+    
+    /* animation: blink 3s linear infinite;    */
 }  
 
 @keyframes blink {
@@ -130,7 +155,7 @@ eventually...
 
 }
 
-/*Intro Section*/
+/*Intro Section*********************************************************/
 .intro-section {    
     display: flex;
     flex-direction: row;
@@ -151,7 +176,7 @@ eventually...
     align-items: flex-end;
 }
 
-/*About Section*/
+/*About Section*********************************************************/
 .about-section {
     display: flex;
     flex-direction: column;
@@ -162,7 +187,7 @@ eventually...
     margin: 0 0 4em 0;
 }
 
-/*Projects Section*/
+/*Projects Section******************************************************/
 .projects-section {
     display: flex;
     flex-direction: column;
@@ -171,11 +196,11 @@ eventually...
     width: 100%;
 }
 
-/*Contact Section*/
+/*Contact Section******************************************************/
 .contact-section {
     display: flex;
     flex-direction: column;    
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
     align-items: center;
 }
@@ -191,7 +216,8 @@ eventually...
 #form{
    display: flex;
    flex-direction: column;
-   width: 420px;
+   width: 26rem;
+   /* width: 420px; */
 
 }
 
@@ -204,7 +230,7 @@ input, textarea{
     /* background-color: #F8BCCC; */
     box-shadow: 0 8px 5px rgba(0, 0, 0, 0.1);
     resize: none;
-    
+    font-size: 16px;
 }
 
 label{
@@ -233,7 +259,7 @@ label{
     box-shadow: 0 8px 5px rgba(0, 0, 0, 0.1);
 }
 
-.button:hover {
+.button:hover {    
     background-color: #aaaaaa69;
     border: 1px solid black;
 }
@@ -243,7 +269,7 @@ label{
     box-shadow: none;
 }
 
-/* Footer */
+/* Footer *********************************************************/
 .footer{
     display: flex;
     flex-direction: row;
@@ -254,7 +280,10 @@ label{
 }
 
 .social-icons{
+    display: flex;
+    justify-content: flex-end;
     width: 200px;
+    
 }
 
 .footer-copy{
@@ -265,7 +294,7 @@ label{
     font-family: 'Raleway',  san sarif;
 }
 
-/* Text */
+/* Text *********************************************************/
 
 h1 {   
     font-family: 'Pompiere',  san sarif;    
@@ -351,7 +380,7 @@ p{
     width:180px;
 }
 
-/* About Me Letter */
+/* Font: About Me Letter *******************************************************/
 .section-copy{
     text-align: left;
     margin-bottom: 1em; 
@@ -438,7 +467,7 @@ a:active{
    
 }
 
-/* Images */
+/* Images ***********************************************************/
 /*removes the 3px margin at the bottom of the images*/
 img{
     vertical-align: middle;
@@ -467,12 +496,277 @@ img{
 
 }
 
-.mockup{
-    width: 25rem;
-    height: auto;
-}
-
 .grow:hover {
     transition: all .2s ease-in-out;
     transform: scale(1.2);
+}
+
+/**************************MEDIA QUERIES********************************/
+/***********************************************************************/
+
+/* Extra small devices (phones, 480px and down) */
+@media only screen and (max-width: 480px) {
+    .body-card{
+        width: 95%;
+    }
+    .scroll{
+        margin-right: 1rem;
+        z-index: 2;
+        
+    }
+    #logo{
+        width: 3.2rem;
+        height: auto;
+    }
+    .intro-section{
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+    }
+    #intro-title{
+        font-size: 3.2em; 
+        text-align: center;
+        margin: 0;
+    }
+    #intro-sub-title{
+        text-align: center;
+        font-size: 1em;
+    }
+    #portrait{
+        width: 22rem;
+        height: auto; 
+    }  
+    .section-title{
+        font-size: 1.6em;
+    }
+    p{
+        font-size: 0.9em;
+    }
+    #greeting{
+        margin-left: 1em;
+    }
+    #salutation{
+        margin-left: 1em;
+    }
+    #signture{
+        font-size: .9em;
+    }
+    .about-section{
+        margin-bottom: 0;
+    }  
+    .contact-section{
+        min-height: 0vh;
+    }
+    #form-section{
+        flex-direction: column;
+        margin: 2rem 0 6rem 0;
+    }
+    #form{
+        width: 100%;
+        margin-top: 2rem;
+    }
+    .contact-title{
+        font-size: 3.6em; 
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+    .contact-sub-title{
+        width: 95%;
+       text-align: center;
+    }
+    #am-span1::before{
+        width: 185px;
+    }
+    
+    #am-span2::before{
+        width: 225px;
+    }
+    
+    #am-span3::before{
+        width: 198px;
+    }
+    #am-span4::before{
+        width: 66px;
+    }
+    #about-section-title::before {
+        width:180px;
+    }
+    
+    #toolkit-section-title::before {
+        width:145px;
+    }
+    
+    #project-section-title::before {
+        width:160px;
+    }
+    
+    #contact-section-title::before {
+        width:155px;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 481px and up) */
+@media only screen and (min-width: 481px) 
+and (max-width: 767px){
+    #logo{
+        width: 4rem;
+        height: auto;
+    }
+    .intro-section{
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+    }
+    #intro-title{
+        font-size: 3.6em; 
+        text-align: center;
+        margin: 0;
+    }
+    #intro-sub-title{
+        text-align: center;
+        font-size: 1em;
+    }
+    #portrait{
+        width: 25rem;
+        height: auto; 
+    }  
+    .about-section{
+        margin-bottom: 0;
+    }  
+    .contact-section{
+        min-height: 0vh;
+    }
+    #form-section{
+        flex-direction: column;
+        margin: 2rem 0 6rem 0;
+    }
+    #form{
+        width: 100%;
+        margin-top: 2rem;
+    }
+    .contact-title{
+        font-size: 4.6em; 
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+    .contact-sub-title{
+        width: 95%;
+       text-align: center;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) 
+and (max-width:1024px) {
+    #logo{
+        width: 4rem;
+        height: auto;
+    }
+    .body-card{
+        width: 90%;
+    }
+    .scroll{
+        margin-right: -10%;
+    }
+    #portrait{
+        width: 30rem;
+        height: auto;     
+    }
+    .header-link{
+        font-size: 1.3em;
+    }
+    .header-link-ltr::before {
+        width: 0%;
+        bottom: 13px;
+    }
+    h1{
+        font-size: 5.6em; 
+    }    
+    .contact-title{
+        font-size: 5.2em;
+    }
+   #intro-sub-title{
+    font-size: 1.2em;
+   }
+   .section-title{
+    font-size: 1.8em;
+   }
+   .intro-section{
+    margin: 0 0 1em 0;
+    flex-direction: row;
+   }   
+   #form-section{
+    margin: 0 0 10rem 0;       
+}
+    .social-icons{
+        width: 115px;
+    }
+}
+
+/*Medium devices on portrait */
+ @media only screen and (min-width: 768px)
+and (max-width: 1024px)
+and (orientation : portrait) 
+{
+    #logo{
+        width: 4rem;
+        height: auto;
+    }
+    .intro-section{
+        flex-direction: column;
+        align-items: center;
+    }
+    #intro-title{
+        text-align: center;
+        margin: 0;
+    }
+    #intro-sub-title{
+        text-align: center;
+    }
+    #portrait{
+        width: 45rem;
+        height: auto; 
+    }
+    .contact-section{
+        min-height: 60vh;
+    }
+}
+
+/* Large devices (laptops/desktops, 1025px and up) */
+@media only screen and (min-width: 1025px)
+and (max-width: 1199px)  {
+    #portrait{
+        width: 37rem;
+        height: auto;     
+    }
+    #intro-title {
+        margin-right: -120px;
+    }
+    h1{
+        font-size: 6.3em; 
+    }
+    .form-section{
+        margin-bottom: 10rem;        
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px)
+and (max-width: 1600px) {
+    .body-card{
+        width: 70%;
+    }
+}
+/* Super Large Desktops: will also probably need to adjust images, font size, etc. */
+@media only screen and (min-width: 1601px)
+and (max-width:2000px) {
+    .body-card{
+        width: 60%;
+    }
+}
+
+@media only screen and (min-width: 2001px) {
+    .body-card{
+        width: 50%;
+    }
 }

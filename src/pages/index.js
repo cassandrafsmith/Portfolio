@@ -1,24 +1,40 @@
 import * as React from "react";
-import { useEffect }from 'react';
-import { Link } from 'gatsby';
+import { useEffect, useState }from 'react';
+import Header from "../components/header"
+import MobileHeader from '../components/mobileHeader';
 import ProjectCard from "../components/projectCard";
+import ProjectCardMobile from "../components/projectCardMobile";
 import Toolkit from "../components/toolkit";
 import './../styles/index.css';
-import logo from './../images/Black and White Minimal Monogram Logo.svg';
 import logo2 from './../images/black_and_white_logo.svg';
 import scroll from './../images/arrow_upward_FILL0_wght400_GRAD0_opsz48.svg'
 import appleTouchIcon from './../images/favicon/apple-touch-icon.png';
 import icon16 from "./../images/favicon/favicon-16x16.png";
 import icon32 from "./../images/favicon/favicon-32x32.png";
 import portrait from './../images/Portrait.png';
-import resume from './../assets/resumeCassandraSmith.pdf';
 import {projectCardInfo} from './../assets/projectCardInfo.js';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
+//check if rendering in browser to use window.innerWidth
+const isBrowser = typeof window !== 'undefined';
 
+const IndexPage = () => {    
+  const [card, setCard] = useState(isBrowser ? window.innerWidth < 767 : null); 
+  const [header, setHeader]  = useState(isBrowser ? window.innerWidth < 650: null);
 
-const IndexPage = () => {
+  //update state depending on screen size
+  const updateSize = () => {
+    setCard(window.innerWidth < 767);
+    setHeader(window.innerWidth < 650);
+  };
+
+  //listen for resize events
+  useEffect(() => {
+    window.addEventListener('resize', updateSize);
+    return () => window.removeEventListener('resize', updateSize);
+  })  
+
   useEffect(() => {
     AOS.init({
         duration: 1200,
@@ -26,23 +42,16 @@ const IndexPage = () => {
         once: true,       
     });
   }, []);
-
-
+  
   return (      
     <div className='main'> 
-
       <div className='body-card'>
-
-        <header className='header'>              
-            <img id='logo' src={logo2} alt='logo' />
-            <ul className='header-list'>       
-              <li className='header-link header-link-ltr'><Link to='#about'>About</Link></li>       
-              <li className='header-link header-link-ltr'><Link to='#projects'>Projects</Link></li>
-              <li className='header-link header-link-ltr'><Link to='#contact'>Contact</Link></li>
-              <li className='header-link header-link-ltr'><a href={resume} target='_blank' rel='noreferrer'>Resume</a></li>
-            </ul>         
-        </header> 
-
+      
+        {header ?
+          <MobileHeader />
+          :          
+          <Header />
+        }           
         <div className='intro-section' id='intro'> 
           <div className='intro-copy'>
             <h1 className='title' id="intro-title"
@@ -110,17 +119,27 @@ const IndexPage = () => {
 
         <div className='projects-section' id='projects'> 
           <h2 className='section-title' id="project-section-title" data-aos='fade-right'>Projects 💜</h2> 
-          <ProjectCard props={projectCardInfo[0]} />
-          <ProjectCard props={projectCardInfo[1]} />
-          <ProjectCard props={projectCardInfo[2]} />
+          {card ? 
+            <>
+              <ProjectCardMobile props={projectCardInfo[0]} />
+              <ProjectCardMobile props={projectCardInfo[1]} />
+              <ProjectCardMobile props={projectCardInfo[2]} />
+            </>
+           : 
+            <>
+              <ProjectCard props={projectCardInfo[0]} />
+              <ProjectCard props={projectCardInfo[1]} />
+              <ProjectCard props={projectCardInfo[2]} />
+            </>
+           }          
         </div> 
 
         <div className='contact-section' id='contact'> 
         <h2 className='section-title' id='contact-section-title' data-aos='fade-right'>Contact 💜</h2> 
-          <div id='form-section'>
+          <div className='form-section' id='form-section'>
             <div>
-              <h1>Let's Connect!</h1>
-              <p>Please, feel free to reach out with any question or comments.</p>              
+              <h1 className='contact-title'>Let's Connect!</h1>
+              <p className='contact-sub-title' >Please, feel free to reach out with any question or comments.</p>              
             </div>
             <div id="contact-form" class="section-content">
               <form 

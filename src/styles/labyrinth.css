@@ -1,0 +1,74 @@
+#labyrinth-page{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;  
+    align-items: center;    
+}
+
+.iframe-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    Margin-top: 5rem;
+}
+
+#close{   
+    top: 2rem;
+    right: 2rem;
+    position: absolute;    
+}
+
+.game-info{
+    width: 65%;
+    display: flex;
+    flex-direction: column;    
+    align-items: center;
+}
+
+.game-title{
+    margin: 1em 0;    
+    font-size: 3em;
+}
+
+.team{
+    font-size: 1.5em;
+    margin: 2em;
+}
+.team-members{
+    margin-bottom: 5em;
+}
+
+
+
+/*******************MEDIA QUERIES********************/
+
+/* Extra small devices (phones, 480px and down) */
+@media only screen and (max-width: 480px) {
+
+}
+
+/* Small devices (portrait tablets and large phones, 481px and up) */
+@media only screen and (min-width: 481px) 
+and (max-width: 767px){
+    
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px)
+and (max-width: 1024px) {
+    iframe{
+        width: 780px;
+        height: 380px;
+    }
+}
+
+/* Large devices (laptops/desktops, 1025px and up) */
+@media only screen and (min-width: 1025px)
+and (max-width: 1199px) {
+
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+
+}
