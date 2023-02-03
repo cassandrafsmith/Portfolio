@@ -11,7 +11,7 @@ export const projectCardInfo =[
         description: `For this project I, along with my
         capstone team members, built a complete website
         rebuild for Decentralized Technologies, a 
-        company located in Merietta, GA. The build included the 
+        company located in Marietta, GA. The build included the 
         public facing website, along with admin, 
         employee, and client dashboards.`,
         tools: 'React • ReactRouter • Node.js • Express • PostgreSQL',
