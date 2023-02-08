@@ -89,8 +89,9 @@ const IndexPage = () => {
               responsive websites and web apps that are both user-friendly and engaging. 💻 
               As a problem-solver, I enjoy a challenge and am excited to broaden my skills in an
               environment that inspires growth, encourages mentorship, and supports continued-learning. 🌟
-              I am currently learning more about inclusive UI/UX design  
-              and how to create digital experiences that are fun and accessible for all.
+              I couple of things that I am currently learning more about are the DevOps methodology and how it 
+              can be used to increase collaboration in team, and also how inclusive UI/UX design  
+              is best used to create digital experiences that are fun and accessible for all.
             </p>
             <p className='section-copy'>             
               I have a <span id='am-span2'>Bachelor of Science in Psychology</span> from Northwestern State University of Louisiana,                
